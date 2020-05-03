@@ -24,3 +24,5 @@ projectFilesBackup
 dist/
 
 *.code-workspace
+
+assets/built/
