@@ -19,13 +19,14 @@ production stylesheet in assets/built/screen.css using gulp dev
 @import "components/actions.css";
 @import "components/hamburger.css";
 @import "components/animations.css";
+@import "custom.css";
 
 
 /* Main - Theme styles
 /* ---------------------------------------------------------- */
 
 body {
-    font-family: 'Muli', sans-serif;
+    font-family: var(--font-sans-serif);
     background: var(--color-bg);
     transition: background 0.3s ease-out;
     transition-delay: 0.25;
@@ -99,7 +100,7 @@ body {
 .page-head-title {
     margin: 0;
     font-size: 4.2rem;
-    color: var(--color-base);
+    color: var(--color-primary);
 }
 @media (max-width: 500px) {
     .page-head-title {
@@ -523,7 +524,7 @@ body {
 
 .post-content-title {
     margin: 0 0 3vw;
-    color: var(--color-base);
+    color: var(--color-primary);
     text-align: center;
 }
 
@@ -585,7 +586,7 @@ body {
 .post-content-body blockquote {
     margin: 0 0 1.5em;
     padding: 0 1.5em;
-    border-left: #3eb0ef 3px solid;
+    border-left: var(--color-primary) 3px solid;
 }
 
 .post-content-body blockquote p {

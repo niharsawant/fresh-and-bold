@@ -1,0 +1,16 @@
+/*
+
+This is a custom css file which is used to override the
+css defined by the theme. Duplicate css will get removed
+during build process using cssnano.
+
+*/
+
+body {
+    font-family: var(--font-sans-serif);
+}
+
+h1 {
+    text-transform: uppercase;
+    color: var(--color-primary);
+}
