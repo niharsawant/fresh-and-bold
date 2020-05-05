@@ -42,15 +42,7 @@
                     {{/if}}
                 </div>
                 <div class="site-head-right">
-                    <div class="social-links">
-                        {{#if @site.facebook}}
-                        <a href="{{facebook_url @site.facebook}}" title="Facebook" target="_blank" rel="noopener">Facebook</a>
-                        {{/if}}
-                        {{#if @site.twitter}}
-                        <a href="{{twitter_url @site.twitter}}" title="Twitter" target="_blank" rel="noopener">Twitter</a>
-                        {{/if}}
-                        <a href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/" title="RSS" target="_blank" rel="noopener">RSS</a>
-                    </div>
+                    {{navigation type="secondary"}}
                 </div>
             </div>
         </header>
