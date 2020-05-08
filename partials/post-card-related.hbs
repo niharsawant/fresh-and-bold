@@ -1,0 +1,16 @@
+{{!--
+
+On every 3rd post, add a special .post-card-large class and load a large image
+For the rest, just output a smaller background image
+
+--}}
+
+<div class="post-card-related-container">
+    <article class="post-card-related {{post_class}} {{#if feature_image}}with-image" style="background-image: url({{img_url feature_image size="s"}}){{else}}no-image{{/if}}">
+        <a class="post-card-related-link" href="{{url}}">
+            <div class="post-card-content">
+                <h2 class="post-card-related-title">{{title}}</h2>
+            </div>
+        </a>
+    </article>
+</div>

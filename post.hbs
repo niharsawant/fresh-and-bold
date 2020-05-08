@@ -21,6 +21,19 @@
         {{content}}
     </div>
 
+
+    <div class="post-content-related">
+        <hr>
+        <h4 class="post-content-related-title">You might also like</h4>
+        <div class="post-content-related-posts">
+            {{#get "posts" filter="primary_tag:{{primary_tag.slug}}" limit="3"}}
+            {{#foreach posts}}
+                {{> "post-card-related"}}
+            {{/foreach}}
+            {{/get}}
+        </div>
+    </div>
+
     {{!-- Email subscribe form at the bottom of the page --}}
     {{#if @labs.subscribers}}
     <section class="subscribe-form">
