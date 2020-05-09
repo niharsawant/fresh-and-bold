@@ -47,7 +47,12 @@ h1 {
 }
 
 .post-card-related .post-card-content {
+    transition: all .3s cubic-bezier(.33,0,.2,1);
     background: rgba(0,0,0,0.15);
+}
+
+.post-card-related:hover .post-card-content {
+    background: rgba(0,0,0,0.2);
 }
 
 .post-card-related-title {
@@ -59,4 +64,8 @@ h1 {
     height: 30%;
     position: absolute;
     bottom: 20px;
+}
+
+.post-card-related:hover .post-card-related-title {
+    bottom: 28px;
 }
