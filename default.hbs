@@ -81,34 +81,8 @@
     <script src="https://unpkg.com/@swup/scroll-plugin@latest/dist/SwupScrollPlugin.min.js"></script>
     <script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
 
+    <script src="{{asset "built/script.js"}}"></script>
 
-    {{!-- Handle swup content replacement --}}
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // Mobile Menu Trigger
-            var navBurger = document.getElementsByClassName('nav-burger')[0];
-            var body = document.getElementsByTagName('body')[0];
-
-            // Initiate Swup transitions
-            var swup = new Swup({
-                plugins: [new SwupScrollPlugin()]
-            });
-
-            navBurger.addEventListener('click', () => {
-                if (body.classList.contains('site-head-open')) {
-                    body.classList.remove('site-head-open');
-                } else {
-                    body.classList.add('site-head-open');
-                }
-            });
-        });
-
-        document.addEventListener('swup:contentReplaced', event => {
-            var body = document.getElementsByTagName('body')[0];
-            body.classList.remove('site-head-open');
-        });
-
-    </script>
 
     {{!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be inc
 luded down here, after jQuery has already loaded. --}}
