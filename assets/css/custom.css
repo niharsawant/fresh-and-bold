@@ -40,7 +40,7 @@ h1 {
 
 .post-card-related {
     position: relative;
-    background: linear-gradient(135deg, #1f1f1f 0%, #111 100%) center center;
+    background: var(--color-primary) center center;
     background-size: cover;
     overflow: hidden;
     width: 100%;
