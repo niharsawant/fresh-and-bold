@@ -69,9 +69,13 @@ h1 {
     font-size: 2.5rem;
     width: 85%;
     transition: all .3s cubic-bezier(.33,0,.2,1);
-    height: 30%;
+    height: 75px;
     position: absolute;
     bottom: 20px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 .post-card-related:hover .post-card-related-title {
