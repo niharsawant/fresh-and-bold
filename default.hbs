@@ -80,11 +80,6 @@
 
     <script src="{{asset "built/swup.js"}}" data-swup-ignore-script></script>
     <script src="{{asset "built/infinitescroll.js"}}" data-swup-ignore-script></script>
-    <script
-        src="https://code.jquery.com/jquery-3.2.1.min.js"
-        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-        crossorigin="anonymous">
-    </script>
 
     <div id="swup">
         {{!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. --}}
@@ -96,10 +91,17 @@
 
     {{!-- Handle swup content replacement --}}
     <script data-swup-ignore-script>
-        $(document).ready(function () {
+        document.addEventListener('DOMContentLoaded', () => {
             // Mobile Menu Trigger
-            $('.nav-burger').click(function () {
-                $('body').toggleClass('site-head-open');
+            var navBurger = document.getElementsByClassName('nav-burger')[0];
+            var body = document.getElementsByTagName('body')[0];
+
+            navBurger.addEventListener('click', () => {
+                if (body.classList.contains('site-head-open')) {
+                    body.classList.remove('site-head-open');
+                } else {
+                    body.classList.add('site-head-open');
+                }
             });
         });
 
@@ -108,8 +110,9 @@
             plugins: [new SwupHeadPlugin(), new SwupScriptsPlugin()],
         });
         document.addEventListener('swup:contentReplaced', event => {
+            var body = document.getElementsByTagName('body')[0];
             initInfiniteScroll(window, document);
-            $('body').removeClass('site-head-open');
+            body.classList.remove('site-head-open');
         });
     </script>
 
