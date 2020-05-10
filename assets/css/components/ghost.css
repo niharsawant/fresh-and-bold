@@ -117,6 +117,7 @@
 .kg-bookmark-content {
     display: flex;
     flex-direction: column;
+    border: 1px solid var(--color-border);
     flex-grow: 1;
     align-items: flex-start;
     justify-content: start;
