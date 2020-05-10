@@ -31,7 +31,7 @@
                         </div>
                     </div>
                 </a>
-                <nav id="swup" class="site-head-left">
+                <nav class="site-head-left">
                     {{navigation}}
                 </nav>
                 <div class="site-head-center">
@@ -78,23 +78,21 @@
     </div>
     {{/if}}
 
-    <script src="{{asset "built/swup.js"}}" data-swup-ignore-script></script>
-    <script src="{{asset "built/infinitescroll.js"}}" data-swup-ignore-script></script>
+    <script src="https://unpkg.com/@swup/scroll-plugin@latest/dist/SwupScrollPlugin.min.js"></script>
+    <script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
 
-    <div id="swup">
-        {{!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. --}}
-        {{{block "scripts"}}}
-
-        {{!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag --}}
-        {{ghost_foot}}
-    </div>
 
     {{!-- Handle swup content replacement --}}
-    <script data-swup-ignore-script>
+    <script>
         document.addEventListener('DOMContentLoaded', () => {
             // Mobile Menu Trigger
             var navBurger = document.getElementsByClassName('nav-burger')[0];
             var body = document.getElementsByTagName('body')[0];
+
+            // Initiate Swup transitions
+            var swup = new Swup({
+                plugins: [new SwupScrollPlugin()]
+            });
 
             navBurger.addEventListener('click', () => {
                 if (body.classList.contains('site-head-open')) {
@@ -105,16 +103,18 @@
             });
         });
 
-        // Initiate Swup transitions
-        var swup = new Swup({
-            plugins: [new SwupHeadPlugin(), new SwupScriptsPlugin()],
-        });
         document.addEventListener('swup:contentReplaced', event => {
             var body = document.getElementsByTagName('body')[0];
-            initInfiniteScroll(window, document);
             body.classList.remove('site-head-open');
         });
+
     </script>
 
+    {{!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be inc
+luded down here, after jQuery has already loaded. --}}
+    {{{block "scripts"}}}
+
+    {{!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag --}}
+    {{ghost_foot}}
 </body>
 </html>
