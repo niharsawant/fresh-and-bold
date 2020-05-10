@@ -138,7 +138,6 @@ body {
 .site-head {
     position: relative;
     z-index: 300;
-    margin-top: -10px;
     font-size: 1.35rem;
 }
 
@@ -386,6 +385,9 @@ body {
         bottom: 0;
         transition: transform 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
         transform: translateY(-4vw);
+        left: 0;
+        right: 0;
+        padding: 0 6vw 0 6vw;
     }
 
 }
