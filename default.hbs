@@ -31,7 +31,7 @@
                         </div>
                     </div>
                 </a>
-                <nav class="site-head-left">
+                <nav id="swup-navigation-primary" class="site-head-left">
                     {{navigation}}
                 </nav>
                 <div class="site-head-center">
@@ -41,14 +41,14 @@
                     <a class="site-head-logo" href="{{@site.url}}">{{@site.title}}</a>
                     {{/if}}
                 </div>
-                <div class="site-head-right">
+                <div id="swup-navigation-secondary" class="site-head-right">
                     {{navigation type="secondary"}}
                 </div>
             </div>
         </header>
 
         <main id="site-main" class="site-main">
-            <div id="swup" class="transition-fade">
+            <div id="swup-body" class="transition-fade">
 
             {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
             {{{body}}}
