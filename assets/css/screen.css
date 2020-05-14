@@ -71,6 +71,15 @@ body {
     margin: auto;
     text-align: center;
 }
+@media (max-width: 850px) {
+    .page-head {
+        max-width: 100%;
+    }
+}
+
+.page-head-articles {
+    padding: 7vw 0;
+}
 
 .error-head {
     height: 75vh;
@@ -102,9 +111,9 @@ body {
     font-size: 4.2rem;
     color: var(--color-primary);
 }
-@media (max-width: 500px) {
+@media (max-width: 850px) {
     .page-head-title {
-        font-size: 2rem;
+        font-size: 3rem;
     }
 }
 
@@ -149,7 +158,7 @@ body {
 
 .site-head-left {
     position: relative;
-        z-index: 100;
+    z-index: 100;
     display: flex;
     align-items: center;
     margin-right: 10px;
@@ -503,9 +512,12 @@ body {
         font-size: 3.4rem;
     }
 }
-@media (max-width: 700px) {
+@media (max-width: 850px) {
     .post-card.no-image:before {
         font-size: 50vw;
+    }
+    .post-card.no-image .post-card-title {
+        font-size: 2.4rem;
     }
 }
 
