@@ -23,12 +23,12 @@
 
 
     {{#get "posts" filter="primary_tag:{{primary_tag.slug}}+id:-{{id}}" limit="3"}}
-    <div class="post-content-related">
+    <div class="post-content-article">
         <hr>
-        <h4 class="post-content-related-title">You might also like</h4>
-        <div class="post-content-related-posts">
+        <h4 class="post-content-article-title">You might also like</h4>
+        <div class="post-content-article-posts">
             {{#foreach posts}}
-                {{> "post-card-related"}}
+                {{> "post-card-article"}}
             {{/foreach}}
         </div>
     </div>
