@@ -6,17 +6,43 @@ during build process using cssnano.
 
 */
 
+html {
+    font-size: 16px;
+}
+
 body {
     font-family: var(--font-sans-serif);
+    font-size: 1rem;
+	line-height: 1.75rem;
 }
 
 h1 {
+    font-size: 2.0625rem;
+	line-height: 1.65em;
     text-transform: uppercase;
     color: var(--color-primary);
 }
 
+h2 {
+	font-size: 1.625rem;
+	line-height: 1.65em;
+}
+
+h3 {
+	font-size: 1.25rem;
+}
+
+h4 {
+	font-size: 1rem;
+}
+
 .site-head {
     margin-top: auto;
+    font-size: 1rem;
+}
+
+.site-foot {
+    font-size: 0.8125rem;
 }
 
 .site-head-open .site-foot {
@@ -29,12 +55,22 @@ h1 {
     padding: 7vw 0;
 }
 
-.page-head-title {
+.page-head-title, .post-content-title {
+	font-size: 2.625rem;
     color: var(--color-primary);
 }
 
-.post-content-title {
-    color: var(--color-primary);
+.post-content-excerpt {
+    font-size: 1.25rem;
+}
+
+.post-content-body {
+    font-size: 1rem;
+    line-height: 1.75em;
+}
+
+.post-content-body pre {
+    font-size: 1rem;
 }
 
 .post-content-body blockquote {
@@ -62,6 +98,10 @@ h1 {
     width: calc(1/3*100% - (1 - 1/3)*var(--margin));
     margin: 0 0 var(--margin) 0;
     align-items: center;
+}
+
+.post-card-title, .post-card.no-image .post-card-title {
+	font-size: 1.625rem;
 }
 
 .post-card-article {
@@ -92,10 +132,11 @@ h1 {
     margin: 0;
     text-align: center;
     display: inline-block;
-    font-size: 2.5rem;
+    font-size: 1.625rem;
+	line-height: 1.5em;
     width: 85%;
     transition: all .3s cubic-bezier(.33,0,.2,1);
-    height: 75px;
+    height: 5.3125rem;
     position: absolute;
     bottom: 20px;
     display: -webkit-box;
@@ -108,6 +149,23 @@ h1 {
     bottom: 28px;
 }
 
+.kg-bookmark-card {
+    margin: 4vw 0;
+}
+
+.kg-bookmark-content {
+    padding: 1.65rem;
+}
+
+.kg-bookmark-description, .kg-bookmark-metadata {
+    margin-top: var(--small-margin);
+}
+
+.kg-bookmark-title {
+    font-size: 1.25rem;
+}
+
+
 @media (max-width: 1024px) {
 
     .post-card-article-container {
@@ -118,12 +176,25 @@ h1 {
 
 @media (max-width: 850px) {
 
-    .page-head {
-        max-width: 100%;
+    html {
+        font-size: 14px;
     }
 
-    .page-head-title {
-        font-size: 2rem;
+    .page-head-title, .post-content-title {
+        line-height: 1.45em
+    }
+
+
+    .site-head-left a {
+        font-size: 1.625rem;
+    }
+
+    .site-head-right a {
+        font-size: 1.25rem;
+    }
+
+    .page-head {
+        max-width: 100%;
     }
 
     .post-content-article {
@@ -139,7 +210,5 @@ h1 {
     .post-card.no-image:before {
         font-size: 50vw;
     }
-    .post-card.no-image .post-card-title {
-        font-size: 2.4rem;
-    }
+
 }
