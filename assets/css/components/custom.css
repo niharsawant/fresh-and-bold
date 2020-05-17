@@ -101,6 +101,11 @@ h4 {
     margin: 0 var(--small-margin) var(--small-margin) 0;
 }
 
+.post-card-content-article-related .post-card-article-container {
+    min-width: auto;
+    height: 300px;
+}
+
 .post-content-article-with-featured .post-card-article-container:nth-child(-n+2) {
     flex: 1 1 calc(1/2*100% - var(--small-margin));
     max-width: calc(1/2*100% - var(--small-margin));
@@ -213,6 +218,7 @@ h4 {
         width: 100%;
     }
 
+    .post-card-content-article-related .post-card-article-container,
     .post-card-article-container {
         min-width: 100%;
         height: 300px;
