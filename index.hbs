@@ -3,19 +3,28 @@
 into the {body} of the default.hbs template --}}
 
 {{#is "home"}}
-    {{#if @site.description}}
+    {{!-- If there is a 'home' page with slug 'home' then load the data.
+    It is mapped via routes.yaml  --}}
+    {{#page}}
     <header class="page-head">
+    {{#if title}}
+        <h1 class="page-head-title">{{title}}</h1>
+    {{else if @site.description}}
         <h1 class="page-head-title">{{@site.description}}</h1>
-    </header>
     {{/if}}
+        <div class="page-head-description">{{content}}</div>
+    </header>
+
+    {{/page}}
+
+    <div class="post-feed post-content-article-posts">
+        {{#get "posts" filter="tags:primary-category " order="published_at asc"}}
+        {{#foreach posts}}
+            {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
+            {{> "post-card-article"}}
+        {{/foreach}}
+        {{/get}}
+    </div>
 {{/is}}
 
-<div class="post-feed post-content-article-posts">
-    {{#get "posts" filter="tags:primary-category " order="published_at asc"}}
-    {{#foreach posts}}
-        {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
-        {{> "post-card-article"}}
-    {{/foreach}}
-    {{/get}}
-</div>
 
