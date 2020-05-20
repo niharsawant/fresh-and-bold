@@ -21,6 +21,9 @@
         {{content}}
     </div>
 
+    <div class="post-content-footer">
+        Published on {{date published_at format="MMMM DD, YYYY"}} in {{tags}}
+    </div>
 
 
     {{#get "posts" filter="primary_tag:{{primary_tag.slug}}+id:-{{id}}" limit="3"}}
