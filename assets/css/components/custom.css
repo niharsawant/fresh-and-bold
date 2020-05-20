@@ -51,8 +51,13 @@ h4 {
     padding: 0 6vw 0 6vw;
 }
 
-.page-head-articles {
-    padding: 7vw 0;
+.page-head-articles, .page-head {
+    padding: 2vw 0;
+}
+
+.page-head-description {
+    margin: 1vw 0 1.6vw;
+    font-size: 1.25rem;
 }
 
 .page-head-title, .post-content-title {
