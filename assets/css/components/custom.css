@@ -192,6 +192,16 @@ h4 {
     font-size: 1.25rem;
 }
 
+.kg-card {
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+}
+
+.kg-card iframe {
+    width: 100%;
+    height: 33vw;
+}
+
 
 @media (max-width: 1024px) {
 
