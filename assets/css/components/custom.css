@@ -180,6 +180,16 @@ h4 {
     margin: 4vw 0;
 }
 
+.kg-card figcaption {
+    padding: 0.75rem;
+    font-weight: normal;
+    color: var(--color-base);
+    text-align: center;
+    opacity: .4;
+    font-style: italic;
+    font-size: 0.8125rem;
+}
+
 .kg-bookmark-content {
     padding: 1.65rem;
 }
