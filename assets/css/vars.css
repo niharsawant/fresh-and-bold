@@ -7,10 +7,12 @@
 
     /* Colours */
     --color-primary: #08C672;
-    --color-base: #222222;
+    --color-base: #222;
+    --color-base-light: #666;
     --color-border: #ddd;
     --color-border-saturated: #bbb;
     --color-bg: #fff;
+    --color-gray: #ababab;
 
     /* Fonts */
     --font-sans-serif: 'Montserrat', sans-serif;
