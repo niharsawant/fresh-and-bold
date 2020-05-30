@@ -8,12 +8,12 @@ into the {body} of the default.hbs template --}}
     <div class="page-head-description">{{content}}</div>
 </header>
 
-<div class="post-content-article-posts">
-    {{#get "posts" filter="tags:photo-journal"}}
+<div class="post-content-article-posts post-content-article-with-featured">
+    {{#get "posts" filter="tags:photo-journal" order="featured desc, published_at desc"}}
     {{#foreach posts}}
 
         {{!-- The tag below includes the markup for each post - partials/post-card-article.hbs --}}
-        {{> "post-card"}}
+        {{> "post-card-article"}}
 
     {{/foreach}}
     {{/get}}
