@@ -36,6 +36,10 @@ h4 {
 	font-size: 1rem;
 }
 
+h1 a, h2 a, h3 a, h4 a {
+    color: color(var(--color-base));
+}
+
 .site-head {
     margin-top: auto;
     font-size: 1rem;
@@ -63,6 +67,27 @@ h4 {
 .page-head-title, .post-content-title {
 	font-size: 2.625rem;
     color: var(--color-primary);
+}
+
+.post-content-list {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 2vw 0 6vw 0;
+}
+
+.post-list-article-footer {
+    font-style: italic;
+    font-size: 0.8125rem;
+    margin-top: 0.5rem;
+    color: var(--color-gray);
+}
+
+.post-list-article-footer a {
+    color: var(--color-base);
+}
+
+.post-list-article-description {
+    margin-bottom: 0;
 }
 
 .post-content-excerpt {
