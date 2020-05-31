@@ -15,11 +15,11 @@ into the {body} of the default.hbs template --}}
 </header>
 {{/tag}}
 
-<div class="post-content-article-posts post-content-article-with-featured">
+<div class="post-content-list">
 {{#foreach posts}}
 
     {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
-    {{> "post-card-article"}}
+    {{> "post-list-article"}}
 
 {{/foreach}}
 </div>
