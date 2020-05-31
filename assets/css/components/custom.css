@@ -123,10 +123,26 @@ h1 a, h2 a, h3 a, h4 a {
 }
 
 .post-content-footer {
-    font-style: italic;
+    display: table;
+    width: 100%;
+    line-height: 2rem;
     font-size: 0.8125rem;
     opacity: 0.5;
     margin: var(--margin) 0;
+}
+
+.post-content-footer-arrow {
+    font-size: 1.15rem;
+    vertical-align: 1px;
+}
+
+.post-content-footer-date {
+    float: right;
+    text-align: right;
+}
+
+.post-content-footer-back {
+    float: left;
 }
 
 .post-card-article-container {
@@ -295,4 +311,11 @@ h1 a, h2 a, h3 a, h4 a {
         font-size: 50vw;
     }
 
+}
+
+@media (max-width: 500px) {
+    .post-content-footer-date {
+        float: none;
+        text-align: left;
+    }
 }

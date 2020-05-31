@@ -21,9 +21,31 @@
         {{content}}
     </div>
 
+    {{!-- To do Need a better logic for this --}}
     {{#if primary_tag}}
         <div class="post-content-footer">
-            Published on {{date published_at format="MMMM DD, YYYY"}} {{#if tags}}in {{tags}}{{/if}}
+            {{#has tag="#articles"}}
+            <div class="post-content-footer-date">
+                Published on {{date published_at format="MMMM DD, YYYY"}} {{#if tags}}in {{tags}}{{/if}}
+            </div>
+            <div class="post-content-footer-back">
+                <a href="/thoughts">
+                    <span class="post-content-footer-arrow">⟵</span>&nbsp;
+                    Go to all articles
+                </a>
+            </div>
+            {{/has}}
+            {{#has tag="#photo-journal"}}
+            <div class="post-content-footer-date">
+                Published on {{date published_at format="MMMM DD, YYYY"}} {{#if tags}}in {{tags}}{{/if}}
+            </div>
+            <div class="post-content-footer-back">
+                <a href="/photo-journal">
+                    <span class="post-content-footer-arrow">⟵</span>&nbsp;
+                    Go to photo journal
+                </a>
+            </div>
+            {{/has}}
         </div>
         {{#get "posts" filter="primary_tag:{{primary_tag.slug}}+id:-{{id}}" limit="3"}}
         {{#if posts}}
@@ -40,7 +62,28 @@
         {{/get}}
     {{else}}
         <div class="post-content-footer">
-            Published on {{date published_at format="MMMM DD, YYYY"}}
+            {{#has tag="#articles"}}
+            <div class="post-content-footer-date">
+                Published on {{date published_at format="MMMM DD, YYYY"}}
+            </div>
+            <div class="post-content-footer-back">
+                <a href="/thoughts">
+                    <span class="post-content-footer-arrow">⟵</span>&nbsp;
+                    Go to all articles
+                </a>
+            </div>
+            {{/has}}
+            {{#has tag="#photo-journal"}}
+            <div class="post-content-footer-date">
+                Published on {{date published_at format="MMMM DD, YYYY"}}
+            </div>
+            <div class="post-content-footer-back">
+                <a href="/photo-journal">
+                    <span class="post-content-footer-arrow">⟵</span>&nbsp;
+                    Go to photo journal
+                </a>
+            </div>
+            {{/has}}
         </div>
     {{/if}}
 
