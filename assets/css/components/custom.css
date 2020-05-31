@@ -55,8 +55,12 @@ h1 a, h2 a, h3 a, h4 a {
     padding: 0 6vw 0 6vw;
 }
 
-.page-head-articles, .page-head {
-    padding: 2vw 0;
+.page-head {
+    padding: 6vw 0;
+}
+
+.page-head-articles {
+    padding: 6vw 0 2vw 0;
 }
 
 .page-head-description {
@@ -119,8 +123,11 @@ h1 a, h2 a, h3 a, h4 a {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    margin: auto;
     width: calc(100% + var(--small-margin));
 }
+
+.post-card { height: 25vw; }
 
 .post-content-footer {
     display: table;
@@ -166,6 +173,17 @@ h1 a, h2 a, h3 a, h4 a {
 .post-content-article-with-featured .post-card-article-container:nth-child(-n+2) {
     flex: 1 1 calc(1/2*100% - var(--small-margin));
     max-width: calc(1/2*100% - var(--small-margin));
+}
+
+.post-content-article-with-index {
+    flex-flow: row wrap-reverse;
+    width: calc(70% + 1.25rem);
+}
+
+.post-content-article-with-index .post-card-article-container {
+    flex: 1 1 calc(100% - var(--small-margin));
+    max-width: calc(100% - var(--small-margin));
+    min-width: 300px;
 }
 
 .post-card-title, .post-card.no-image .post-card-title {
@@ -261,9 +279,10 @@ h1 a, h2 a, h3 a, h4 a {
         max-width: calc(1/2*100% - var(--small-margin));
     }
 
-    .post-content-article-with-featured .post-card-article-container:nth-child(-n+2) {
-        flex: 1 1 calc(100% - var(--small-margin));
-        max-width: calc(100% - var(--small-margin));
+    .post-content-article-with-featured .post-card-article-container:nth-child(-n+2),
+    .post-content-article-with-index .post-card-article-container {
+        flex: 1 1 calc(100%);
+        max-width: calc(100%);
     }
 
 }
@@ -275,7 +294,14 @@ h1 a, h2 a, h3 a, h4 a {
     }
 
     .page-head-title, .post-content-title {
-        line-height: 1.45em
+        line-height: 1.45em;
+        width: 100%;
+        font-size: 2.5rem;
+    }
+
+    .post-content-excerpt {
+        margin-top: 0.5rem;
+        margin-bottom: 2rem;
     }
 
 
@@ -295,6 +321,11 @@ h1 a, h2 a, h3 a, h4 a {
         width: 100%;
     }
 
+    .post-card {
+        flex: 1 1 100%;
+        height: 50vw;
+    }
+
     .post-card-content-article-related .post-card-article-container,
     .post-card-article-container {
         min-width: 100%;
@@ -309,6 +340,10 @@ h1 a, h2 a, h3 a, h4 a {
 
     .post-card.no-image:before {
         font-size: 50vw;
+    }
+
+    .kg-card iframe {
+        height: 66vw;
     }
 
 }
