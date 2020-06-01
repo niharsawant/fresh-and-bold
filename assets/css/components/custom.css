@@ -55,12 +55,14 @@ h1 a, h2 a, h3 a, h4 a {
     padding: 0 6vw 0 6vw;
 }
 
-.page-head {
-    padding: 6vw 0;
+.page-head, .page-head-articles {
+    padding: 6vw 0 4vw 0;
 }
 
-.page-head-articles {
-    padding: 6vw 0 2vw 0;
+.page-index-body {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 2vw 0 6vw 0;
 }
 
 .page-head-description {
@@ -315,9 +317,11 @@ h1 a, h2 a, h3 a, h4 a {
 
     .page-head {
         max-width: 100%;
+        padding: 6vw 0;
     }
 
     .post-content-article {
+        padding: 6vw 0 2vw 0;
         width: 100%;
     }
 
@@ -333,6 +337,7 @@ h1 a, h2 a, h3 a, h4 a {
         margin-right: 0;
         transform: none;
     }
+
 
     .post-content-article-posts {
         width: 100%;
