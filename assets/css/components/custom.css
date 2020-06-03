@@ -273,6 +273,55 @@ h1 a, h2 a, h3 a, h4 a {
     height: 33vw;
 }
 
+/* Publicly accessible components */
+
+.cta-container {
+    display: flex;
+    justify-content: center;
+    margin: var(--margin) auto;
+    flex-flow: row wrap;
+}
+.cta {
+    font-size: 1rem;
+    cursor: pointer;
+    color: var(--color-primary);
+    border: 1px solid color(var(--color-primary));
+    background: transparent;
+    padding: 0.75em 1.5em;
+    line-height: 1.65em;
+    height: auto;
+    box-shadow: none;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 0.5em;
+    border-radius: 0.2em;
+    display: inline-block;
+    flex: 1 1 calc(50% - 1rem);
+    max-width: 250px;
+    text-align: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.cta:hover, .cta:focus, .cta:visited {
+    box-shadow: none;
+    border-color: color(var(--color-primary) l(-7%));
+    color: color(var(--color-primary) l(-7%));
+    text-decoration: none;
+}
+
+.cta-primary {
+    color: var(--color-bg);
+    background: color(var(--color-primary));
+}
+
+.cta-primary:hover, .cta-primary:visited, .cta-primary:focus {
+    color: var(--color-bg);
+    border-color: color(var(--color-primary) l(-2%));
+    background: color(var(--color-primary) l(-2%));
+}
+
 
 @media (max-width: 1024px) {
 
@@ -357,5 +406,11 @@ h1 a, h2 a, h3 a, h4 a {
     .post-content-footer-date {
         float: none;
         text-align: left;
+    }
+
+    .cta {
+        flex: 1 1 calc(100%);
+        max-width: 100%;
+        margin: 0.5rem 0;
     }
 }
