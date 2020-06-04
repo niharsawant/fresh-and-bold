@@ -2,8 +2,7 @@
     var swup = new Swup({
         containers: [
             "#swup-body",
-            "#swup-navigation-primary",
-            '#swup-navigation-secondary'
+            "#swup-navigation-primary"
         ],
         plugins: [new SwupScrollPlugin()]
     });

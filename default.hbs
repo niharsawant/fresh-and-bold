@@ -31,17 +31,15 @@
                         </div>
                     </div>
                 </a>
-                <nav id="swup-navigation-primary" class="site-head-left">
-                    {{navigation}}
-                </nav>
-                <div class="site-head-center">
+                <nav class="site-head-left">
                     {{#if @site.logo}}
                     <a class="site-head-logo" href="{{@site.url}}"><img src="{{@site.logo}}" alt="{{@site.title}}" /></a>
                     {{else}}
                     <a class="site-head-logo" href="{{@site.url}}">{{@site.title}}</a>
                     {{/if}}
-                </div>
-                <div id="swup-navigation-secondary" class="site-head-right">
+                </nav>
+                <div id="swup-navigation-primary" class="site-head-right">
+                    {{navigation}}
                     {{navigation type="secondary"}}
                 </div>
             </div>
