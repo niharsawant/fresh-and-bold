@@ -40,9 +40,26 @@ h1 a, h2 a, h3 a, h4 a {
     color: color(var(--color-base));
 }
 
+.nav {
+    margin: 0;
+}
+
 .site-head {
     margin-top: auto;
     font-size: 1rem;
+}
+
+.site-head-container {
+    grid-template-columns: 1fr 1fr;
+}
+
+.site-head-left {
+    margin-right: 0;
+}
+
+.site-head-left .site-head-logo {
+    font-size: 1.25rem;
+    opacity: 1;
 }
 
 .site-foot {
@@ -355,9 +372,19 @@ h1 a, h2 a, h3 a, h4 a {
         margin-bottom: 2rem;
     }
 
+    .site-head-left {
+        margin-top: 4rem;
+        margin-bottom: 1rem;
+    }
 
-    .site-head-left a {
+    .site-head-right {
+        margin-top: 0;
+        flex-flow: row wrap;
+    }
+
+    .site-head-left .site-head-logo {
         font-size: 1.625rem;
+        font-weight: 600;
     }
 
     .site-head-right a {
