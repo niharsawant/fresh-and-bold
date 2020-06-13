@@ -47,7 +47,7 @@
             </div>
             {{/has}}
         </div>
-        {{#get "posts" filter="primary_tag:{{primary_tag.slug}}+id:-{{id}}" limit="3"}}
+        {{#get "posts" filter="primary_tag:{{primary_tag.slug}}+comment_id:-{{comment_id}}" limit="3"}}
         {{#if posts}}
             <div class="post-content-article">
                 <hr>
