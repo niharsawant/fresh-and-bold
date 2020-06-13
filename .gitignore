@@ -22,3 +22,8 @@ projectFilesBackup
 .DS_Store
 
 dist/
+
+*.code-workspace
+
+assets/built/
+routes.yaml

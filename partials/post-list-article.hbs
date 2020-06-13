@@ -1,0 +1,14 @@
+{{!--
+
+On every 3rd post, add a special .post-card-large class and load a large image
+For the rest, just output a smaller background image
+
+--}}
+
+<div class="post-list-article-container">
+    <h2><a href="{{url}}">{{title}}</a></h2>
+    <p class="post-list-article-description">{{excerpt}}</p>
+    <div class="post-list-article-footer">
+        {{date published_at format="MMMM DD, YYYY"}} {{#if tags}}in {{tags}}{{/if}}
+    </div>
+</div>
