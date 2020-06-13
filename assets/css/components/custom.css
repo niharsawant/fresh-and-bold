@@ -1,0 +1,443 @@
+/*
+
+This is a custom css file which is used to override the
+css defined by the theme. Duplicate css will get removed
+during build process using cssnano.
+
+*/
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--font-sans-serif);
+    font-size: 1rem;
+	line-height: 1.75rem;
+}
+
+h1 {
+    font-size: 2.0625rem;
+	line-height: 1.65em;
+    text-transform: uppercase;
+    color: var(--color-primary);
+}
+
+h2 {
+	font-size: 1.625rem;
+	line-height: 1.65em;
+}
+
+h3 {
+	font-size: 1.25rem;
+}
+
+h4 {
+	font-size: 1rem;
+}
+
+h1 a, h2 a, h3 a, h4 a {
+    color: color(var(--color-base));
+}
+
+.nav {
+    margin: 0;
+}
+
+.site-head {
+    margin-top: auto;
+    font-size: 1rem;
+}
+
+.site-head-container {
+    grid-template-columns: 1fr 1fr;
+}
+
+.site-head-left {
+    margin-right: 0;
+}
+
+.site-head-left .site-head-logo {
+    font-size: 1.25rem;
+    opacity: 1;
+}
+
+.site-foot {
+    font-size: 0.8125rem;
+}
+
+.site-head-open .site-foot {
+    left: 0;
+    right: 0;
+    padding: 0 6vw 0 6vw;
+}
+
+.page-head, .page-head-articles {
+    padding: 6vw 0 4vw 0;
+}
+
+.page-index-body {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 2vw 0 6vw 0;
+}
+
+.page-head-description {
+    margin: 1vw 0 1.6vw;
+    font-size: 1.25rem;
+}
+
+.page-head-title, .post-content-title {
+	font-size: 2.625rem;
+    color: var(--color-primary);
+}
+
+.post-content-list {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 2vw 0 6vw 0;
+}
+
+.post-list-article-footer {
+    font-style: italic;
+    font-size: 0.8125rem;
+    margin-top: 0.5rem;
+    color: var(--color-gray);
+}
+
+.post-list-article-footer a {
+    color: var(--color-base);
+}
+
+.post-list-article-description {
+    margin-bottom: 0;
+}
+
+.post-content-excerpt {
+    font-size: 1.25rem;
+}
+
+.post-content-body {
+    font-size: 1rem;
+    line-height: 1.75em;
+}
+
+.post-content-body pre {
+    font-size: 1rem;
+}
+
+.post-content-body blockquote {
+    border-left: var(--color-primary) 3px solid;
+}
+
+.post-content-article {
+    position: relative;
+    width: 75vw;
+    margin: 4vw calc(50% - 50vw);
+    transform: translateX(calc(50vw - 50%));
+    text-align: center;
+}
+
+.post-content-article-posts {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: auto;
+    width: calc(100% + var(--small-margin));
+}
+
+.post-card { height: 25vw; }
+
+.post-content-footer {
+    display: table;
+    width: 100%;
+    line-height: 2rem;
+    font-size: 0.8125rem;
+    opacity: 0.5;
+    margin: var(--margin) 0;
+}
+
+.post-content-footer-arrow {
+    font-size: 1.15rem;
+    vertical-align: 1px;
+}
+
+.post-content-footer-date {
+    float: right;
+    text-align: right;
+}
+
+.post-content-footer-back {
+    float: left;
+}
+
+.post-card-article-container {
+    flex: 1 1 calc(1/3*100% - var(--small-margin));
+    box-sizing: border-box;
+    height: 350px;
+    min-width: 400px;
+    max-width: calc(1/2*100% - var(--small-margin));
+    margin: 0 var(--small-margin) var(--small-margin) 0;
+}
+
+.post-content-article-title {
+    margin-bottom: var(--margin);
+}
+
+.post-card-content-article-related .post-card-article-container {
+    min-width: auto;
+    height: 300px;
+}
+
+.post-content-article-with-featured .post-card-article-container:nth-child(-n+2) {
+    flex: 1 1 calc(1/2*100% - var(--small-margin));
+    max-width: calc(1/2*100% - var(--small-margin));
+}
+
+.post-content-article-with-index {
+    flex-flow: row wrap-reverse;
+    width: calc(70% + 1.25rem);
+}
+
+.post-content-article-with-index .post-card-article-container {
+    flex: 1 1 calc(100% - var(--small-margin));
+    max-width: calc(100% - var(--small-margin));
+    min-width: 300px;
+}
+
+.post-card-title, .post-card.no-image .post-card-title {
+	font-size: 1.625rem;
+}
+
+.post-card-article {
+    position: relative;
+    background: var(--color-primary) center center;
+    background-size: cover;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.post-card-article .post-card-content {
+    transition: all .3s cubic-bezier(.33,0,.2,1);
+    background: rgba(0,0,0,0.15);
+}
+
+.post-card-article:hover .post-card-content {
+    background: rgba(0,0,0,0.2);
+}
+
+.post-card-article-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.post-card-article-title {
+    margin: 0;
+    text-align: center;
+    display: inline-block;
+    font-size: 1.625rem;
+	line-height: 1.5em;
+    width: 85%;
+    transition: all .3s cubic-bezier(.33,0,.2,1);
+    height: 5.3125rem;
+    position: absolute;
+    bottom: 20px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.post-card-article:hover .post-card-article-title {
+    bottom: 28px;
+}
+
+.kg-bookmark-card {
+    margin: 4vw 0;
+}
+
+.kg-card figcaption {
+    padding: 0.75rem;
+    font-weight: normal;
+    color: var(--color-base);
+    text-align: center;
+    opacity: .4;
+    font-style: italic;
+    font-size: 0.8125rem;
+}
+
+.kg-bookmark-content {
+    padding: 1.65rem;
+}
+
+.kg-bookmark-description, .kg-bookmark-metadata {
+    margin-top: var(--small-margin);
+}
+
+.kg-bookmark-title {
+    font-size: 1.25rem;
+}
+
+.kg-card {
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+}
+
+.kg-card iframe {
+    width: 100%;
+    height: 33vw;
+}
+
+/* Publicly accessible components */
+
+.cta-container {
+    display: flex;
+    justify-content: center;
+    margin: var(--margin) auto;
+    flex-flow: row wrap;
+}
+.cta {
+    font-size: 1rem;
+    cursor: pointer;
+    color: var(--color-primary);
+    border: 1px solid color(var(--color-primary));
+    background: transparent;
+    padding: 0.75em 1.5em;
+    line-height: 1.65em;
+    height: auto;
+    box-shadow: none;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 0.5em;
+    border-radius: 0.2em;
+    display: inline-block;
+    flex: 1 1 calc(50% - 1rem);
+    max-width: 250px;
+    text-align: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.cta:hover, .cta:focus, .cta:visited {
+    box-shadow: none;
+    border-color: color(var(--color-primary) l(-7%));
+    color: color(var(--color-primary) l(-7%));
+    text-decoration: none;
+}
+
+.cta-primary {
+    color: var(--color-bg);
+    background: color(var(--color-primary));
+}
+
+.cta-primary:hover, .cta-primary:visited, .cta-primary:focus {
+    color: var(--color-bg);
+    border-color: color(var(--color-primary) l(-2%));
+    background: color(var(--color-primary) l(-2%));
+}
+
+
+@media (max-width: 1024px) {
+
+    .post-card-article-container {
+        flex: 1 1 calc(1/2*100% - var(--small-margin));
+        max-width: calc(1/2*100% - var(--small-margin));
+    }
+
+    .post-content-article-with-featured .post-card-article-container:nth-child(-n+2),
+    .post-content-article-with-index .post-card-article-container {
+        flex: 1 1 calc(100%);
+        max-width: calc(100%);
+    }
+
+}
+
+@media (max-width: 850px) {
+
+    html {
+        font-size: 14px;
+    }
+
+    .page-head-title, .post-content-title {
+        line-height: 1.45em;
+        width: 100%;
+        font-size: 2.5rem;
+    }
+
+    .post-content-excerpt {
+        margin-top: 0.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .site-head-left {
+        margin-top: 4rem;
+        margin-bottom: 1rem;
+    }
+
+    .site-head-right {
+        margin-top: 0;
+        flex-flow: row wrap;
+    }
+
+    .site-head-left .site-head-logo {
+        font-size: 1.625rem;
+        font-weight: 600;
+    }
+
+    .site-head-right a {
+        font-size: 1.25rem;
+    }
+
+    .page-head {
+        max-width: 100%;
+        padding: 6vw 0;
+    }
+
+    .post-content-article {
+        padding: 6vw 0 2vw 0;
+        width: 100%;
+    }
+
+    .post-card {
+        flex: 1 1 100%;
+        height: 50vw;
+    }
+
+    .post-card-content-article-related .post-card-article-container,
+    .post-card-article-container {
+        min-width: 100%;
+        height: 300px;
+        margin-right: 0;
+        transform: none;
+    }
+
+
+    .post-content-article-posts {
+        width: 100%;
+    }
+
+    .post-card.no-image:before {
+        font-size: 50vw;
+    }
+
+    .kg-card iframe {
+        height: 66vw;
+    }
+
+}
+
+@media (max-width: 500px) {
+    .post-content-footer-date {
+        float: none;
+        text-align: left;
+    }
+
+    .cta {
+        flex: 1 1 calc(100%);
+        max-width: 100%;
+        margin: 0.5rem 0;
+    }
+}

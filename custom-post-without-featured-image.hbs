@@ -11,12 +11,6 @@
         <p class="post-content-excerpt">{{custom_excerpt}}</p>
     {{/if}}
 
-    {{#if feature_image}}
-    <div class="post-content-image">
-        <img class="kg-image" src="{{feature_image}}" alt="{{title}}" />
-    </div>
-    {{/if}}
-
     <div class="post-content-body">
         {{content}}
     </div>
@@ -47,7 +41,7 @@
             </div>
             {{/has}}
         </div>
-        {{#get "posts" filter="primary_tag:{{primary_tag.slug}}+comment_id:-{{comment_id}}" limit="3"}}
+        {{#get "posts" filter="primary_tag:{{primary_tag.slug}}+commend_id:-{{comment_id}}" limit="3"}}
         {{#if posts}}
             <div class="post-content-article">
                 <hr>
