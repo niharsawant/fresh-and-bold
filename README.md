@@ -1,13 +1,13 @@
-# London
+# Fresh and Bold
 
-A custom, image-centric theme for [Ghost](http://github.com/tryghost/ghost/). Made for publishers and portfolios with plenty of graphics to show off to the world. Completely free and fully responsive, released under the MIT license.
+'Fresh and Bold' is an open source, image-centric portfolio theme for [Ghost](https://ghost.org) derived from [London](https://github.com/TryGhost/London) theme. It was orignially developed for the personal site of Nihar Sawant and now released under the MIT license.
 
-**Demo: https://london.ghost.io**
+**Demo: http://nihar.sawant.me**
+
 
 &nbsp;
 
-![london](https://user-images.githubusercontent.com/120485/50552024-84837400-0c82-11e9-8f1d-cf25962c7e62.jpg)
-
+![fresh and bold](https://user-images.githubusercontent.com/731954/84570721-ebc8b180-adac-11ea-8221-5869edef2243.jpg)
 
 &nbsp;
 
@@ -38,8 +38,8 @@ One neat trick is that you can also create custom one-off templates just by addi
 London styles are compiled using Gulp/PostCSS to polyfill future CSS spec. You'll need [Node](https://nodejs.org/), [Yarn](https://yarnpkg.com/) and [Gulp](https://gulpjs.com) installed globally. After that, from the theme's root directory:
 
 ```bash
-$ yarn install
-$ yarn dev
+$ npm install
+$ npm dev
 ```
 
 Now you can edit `/assets/css/` files, which will be compiled to `/assets/built/` automatically.
@@ -47,7 +47,7 @@ Now you can edit `/assets/css/` files, which will be compiled to `/assets/built/
 The `zip` Gulp task packages the theme files into `dist/<theme-name>.zip`, which you can then upload to your site.
 
 ```bash
-$ yarn zip
+$ npm zip
 ```
 
 # PostCSS Features Used
@@ -59,4 +59,4 @@ $ yarn zip
 
 # Copyright & License
 
-Copyright (c) 2013-2020 Ghost Foundation - Released under the [MIT license](LICENSE).
+Copyright (c) 2013-2020 Nihar Sawant - Released under the [MIT license](LICENSE).
