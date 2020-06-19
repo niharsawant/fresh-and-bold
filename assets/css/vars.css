@@ -15,7 +15,7 @@
     --color-gray: #ababab;
 
     /* Fonts */
-    --font-sans-serif: 'Montserrat', sans-serif;
+    --font-sans-serif: 'Montserrat', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
     --font-serif: Georgia, Times, serif;
     --font-mono: Menlo, Courier, monospace;
     --font-light: 100;
