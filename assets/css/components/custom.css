@@ -59,7 +59,6 @@ h1 a, h2 a, h3 a, h4 a {
 
 .site-head-left .site-head-logo {
     font-size: 1.25rem;
-    opacity: 1;
 }
 
 .site-foot {
@@ -372,14 +371,13 @@ h1 a, h2 a, h3 a, h4 a {
         margin-bottom: 2rem;
     }
 
-    .site-head-left {
-        margin-top: 4rem;
-        margin-bottom: 1rem;
-    }
-
     .site-head-right {
         margin-top: 0;
         flex-flow: row wrap;
+    }
+
+    .site-head-right, .site-head-left {
+        top: 10vw;
     }
 
     .site-head-left .site-head-logo {
