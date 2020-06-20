@@ -21,72 +21,48 @@
         {{content}}
     </div>
 
-    {{!-- To do Need a better logic for this --}}
-    {{#if primary_tag}}
-        <div class="post-content-footer">
-            {{#has tag="#articles"}}
-            <div class="post-content-footer-date">
-                Published on {{date published_at format="MMMM DD, YYYY"}} {{#if tags}}in {{tags}}{{/if}}
-            </div>
-            <div class="post-content-footer-back">
-                <a href="/thoughts">
-                    <span class="post-content-footer-arrow">⟵</span>&nbsp;
-                    Go to all articles
-                </a>
-            </div>
-            {{/has}}
-            {{#has tag="#photo-journal"}}
-            <div class="post-content-footer-date">
-                Published on {{date published_at format="MMMM DD, YYYY"}} {{#if tags}}in {{tags}}{{/if}}
-            </div>
-            <div class="post-content-footer-back">
-                <a href="/photo-journal">
-                    <span class="post-content-footer-arrow">⟵</span>&nbsp;
-                    Go to photo journal
-                </a>
-            </div>
-            {{/has}}
+    <div class="post-content-footer">
+        {{#has tag="#articles"}}
+        <div class="post-content-footer-date">
+            Published on {{date published_at format="MMMM DD, YYYY"}}
+            {{#if primary_tag}}{{#if tags}}in {{tags}}{{/if}}{{/if}}
         </div>
-        {{#get "posts" filter="primary_tag:{{primary_tag.slug}}+comment_id:-{{comment_id}}" limit="3"}}
-        {{#if posts}}
-            <div class="post-content-article">
-                <hr>
-                <h2 class="post-content-article-title">You might also like</h2>
-                <div class="post-content-article-posts post-card-content-article-related">
-                    {{#foreach posts}}
-                        {{> "post-card-article"}}
-                    {{/foreach}}
-                </div>
-            </div>
-        {{/if}}
-        {{/get}}
-    {{else}}
-        <div class="post-content-footer">
-            {{#has tag="#articles"}}
-            <div class="post-content-footer-date">
-                Published on {{date published_at format="MMMM DD, YYYY"}}
-            </div>
-            <div class="post-content-footer-back">
-                <a href="/thoughts">
-                    <span class="post-content-footer-arrow">⟵</span>&nbsp;
-                    Go to all articles
-                </a>
-            </div>
-            {{/has}}
-            {{#has tag="#photo-journal"}}
-            <div class="post-content-footer-date">
-                Published on {{date published_at format="MMMM DD, YYYY"}}
-            </div>
-            <div class="post-content-footer-back">
-                <a href="/photo-journal">
-                    <span class="post-content-footer-arrow">⟵</span>&nbsp;
-                    Go to photo journal
-                </a>
-            </div>
-            {{/has}}
+        <div class="post-content-footer-back">
+            <a href="/thoughts">
+                <span class="post-content-footer-arrow">⟵</span>&nbsp;
+                Go to all articles
+            </a>
         </div>
-    {{/if}}
+        {{/has}}
+        {{#has tag="#photo-journal"}}
+        <div class="post-content-footer-date">
+            Published on {{date published_at format="MMMM DD, YYYY"}}
+            {{#if primary_tag}}{{#if tags}}in {{tags}}{{/if}}{{/if}}
+        </div>
+        <div class="post-content-footer-back">
+            <a href="/photo-journal">
+                <span class="post-content-footer-arrow">⟵</span>&nbsp;
+                Go to photo journal
+            </a>
+        </div>
+        {{/has}}
+    </div>
 
+    {{#if primary_tag}}
+    {{#get "posts" filter="primary_tag:{{primary_tag.slug}}+comment_id:-{{comment_id}}" limit="3"}}
+    {{#if posts}}
+    <div class="post-content-article">
+        <hr>
+        <h2 class="post-content-article-title">You might also like</h2>
+        <div class="post-content-article-posts post-card-content-article-related">
+            {{#foreach posts}}
+                {{> "post-card-article"}}
+            {{/foreach}}
+        </div>
+    </div>
+    {{/if}}
+    {{/get}}
+    {{/if}}
 
     {{!-- Email subscribe form at the bottom of the page --}}
     {{#if @labs.subscribers}}
@@ -97,15 +73,6 @@
     </section>
     {{/if}}
 
-    <footer class="post-content-footer">
-
-        {{!-- There are two options for how we display the byline/author-info.
-        If the post has more than one author, we load a specific template
-        from includes/byline-multiple.hbs, otherwise, we just use the
-        default byline. --}}
-
-
-    </footer>
 
     {{!--
     <section class="post-content-comments">
