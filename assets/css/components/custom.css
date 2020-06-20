@@ -59,7 +59,6 @@ h1 a, h2 a, h3 a, h4 a {
 
 .site-head-left .site-head-logo {
     font-size: 1.25rem;
-    opacity: 1;
 }
 
 .site-foot {
@@ -145,8 +144,6 @@ h1 a, h2 a, h3 a, h4 a {
     margin: auto;
     width: calc(100% + var(--small-margin));
 }
-
-.post-card { height: 25vw; }
 
 .post-content-footer {
     display: table;
@@ -372,14 +369,13 @@ h1 a, h2 a, h3 a, h4 a {
         margin-bottom: 2rem;
     }
 
-    .site-head-left {
-        margin-top: 4rem;
-        margin-bottom: 1rem;
-    }
-
     .site-head-right {
         margin-top: 0;
         flex-flow: row wrap;
+    }
+
+    .site-head-right, .site-head-left {
+        top: 10vw;
     }
 
     .site-head-left .site-head-logo {
@@ -391,6 +387,10 @@ h1 a, h2 a, h3 a, h4 a {
         font-size: 1.25rem;
     }
 
+    .site-head-open .site-head-container {
+        margin-bottom: 4px;
+    }
+
     .page-head {
         max-width: 100%;
         padding: 6vw 0;
@@ -399,11 +399,6 @@ h1 a, h2 a, h3 a, h4 a {
     .post-content-article {
         padding: 6vw 0 2vw 0;
         width: 100%;
-    }
-
-    .post-card {
-        flex: 1 1 100%;
-        height: 50vw;
     }
 
     .post-card-content-article-related .post-card-article-container,
@@ -417,10 +412,6 @@ h1 a, h2 a, h3 a, h4 a {
 
     .post-content-article-posts {
         width: 100%;
-    }
-
-    .post-card.no-image:before {
-        font-size: 50vw;
     }
 
     .kg-card iframe {
