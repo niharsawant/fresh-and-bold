@@ -145,8 +145,6 @@ h1 a, h2 a, h3 a, h4 a {
     width: calc(100% + var(--small-margin));
 }
 
-.post-card { height: 25vw; }
-
 .post-content-footer {
     display: table;
     width: 100%;
@@ -403,11 +401,6 @@ h1 a, h2 a, h3 a, h4 a {
         width: 100%;
     }
 
-    .post-card {
-        flex: 1 1 100%;
-        height: 50vw;
-    }
-
     .post-card-content-article-related .post-card-article-container,
     .post-card-article-container {
         min-width: 100%;
@@ -419,10 +412,6 @@ h1 a, h2 a, h3 a, h4 a {
 
     .post-content-article-posts {
         width: 100%;
-    }
-
-    .post-card.no-image:before {
-        font-size: 50vw;
     }
 
     .kg-card iframe {
