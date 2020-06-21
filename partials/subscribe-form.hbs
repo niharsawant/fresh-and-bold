@@ -5,10 +5,14 @@
         <div class="form-group">
             <input type="text" class="subscribe-email" data-members-email placeholder="youremail@example.com" autocomplete="false" />
             <button class="cta cta-primary" type="submit">
-                Subscribe
+                <div class="cta-content">Subscribe</div>
+                <div class="cta-loader">{{> icons/loader}}</div>
             </button>
         </div>
-        <p class="post-content-form-error" data-members-error></p>
+        <p class="post-content-form-message post-content-form-error" data-members-error></p>
+        <p class="post-content-form-message post-content-form-success">
+            <strong>Great!</strong> Check your inbox and click the link to confirm your subscription.
+        </p>
     </form>
     <p>Prefer RSS? Use this URL in your favorite RSS reader: <a href="{{@site.url}}/rss">{{@site.url}}/rss</a></p>
 </section>
