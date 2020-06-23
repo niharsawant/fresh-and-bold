@@ -4,6 +4,7 @@ const pump = require('pump');
 // gulp plugins and utils
 var livereload = require('gulp-livereload');
 var postcss = require('gulp-postcss');
+var concat = require('gulp-concat');
 var zip = require('gulp-zip');
 var uglify = require('gulp-uglify');
 var beeper = require('beeper');
@@ -55,8 +56,14 @@ function css(done) {
 
 function js(done) {
     pump([
-        src('assets/js/*.js', {sourcemaps: true}),
+        src([
+            'assets/js/swup.js',
+            'assets/js/SwupScriptsPlugin.js',
+            'assets/js/SwupScrollPlugin.js',
+            'assets/js/script.js'
+        ], {sourcemaps: true}),
         uglify(),
+        concat('script.js'),
         dest('assets/built/', {sourcemaps: '.'}),
         livereload()
     ], handleError(done));
