@@ -11,6 +11,7 @@ into the {body} of the default.hbs template --}}
 <div class="post-content-list">
     {{#get "posts" filter="tags:article" include="tags" order="featured desc, published_at desc"}}
     {{#foreach posts}}
+
         {{!-- The tag below includes the markup for each post - partials/post-card-article.hbs --}}
         {{> "post-list-article"}}
 
@@ -18,5 +19,10 @@ into the {body} of the default.hbs template --}}
     {{/get}}
 </div>
 {{/post}}
+
+{{!-- Email subscribe form at the bottom of the page --}}
+{{#if @labs.members}}
+    {{> subscribe-form}}
+{{/if}}
 
 
