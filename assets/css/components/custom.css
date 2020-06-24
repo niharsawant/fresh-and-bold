@@ -287,6 +287,59 @@ h1 a, h2 a, h3 a, h4 a {
     height: 33vw;
 }
 
+.post-content-form {
+    width: 45vw;
+    margin: 2rem auto;
+}
+
+.post-content-form .form-group {
+    display: flex;
+    width: 100%;
+}
+.post-content-form .cta-loader {
+    display: none;
+    transform: scale(0.85);
+}
+
+.form-group input[type="text"] {
+    display: inline-block;
+    padding: 0.75em 1.5em;
+    line-height: 1.65em;
+    height: auto;
+    border-radius: 0;
+}
+
+.form-group button {
+    width: 180px;
+    flex: none;
+}
+
+.post-content-form.loading button[type="submit"] {
+    cursor: default;
+    background: var(--color-gray);
+    border: 1px solid var(--color-border-saturated);
+}
+
+
+.post-content-form.loading .cta-loader { display: block; }
+
+.post-content-form.loading .cta-content { display: none; }
+
+.post-content-form-message {
+    display: none;
+    color: tomato;
+    margin-top: 10px;
+    font-size: .8125rem;
+}
+
+.post-content-form-error { color: tomato; }
+.post-content-form-success {
+    color: var(--color-primary);
+}
+
+.post-content-form.success .post-content-form-success { display: block; }
+.post-content-form.error .post-content-form-error { display: block; }
+
 /* Publicly accessible components */
 
 .cta-container {
@@ -318,7 +371,7 @@ h1 a, h2 a, h3 a, h4 a {
     white-space: nowrap;
 }
 
-.cta:hover, .cta:focus, .cta:visited {
+.cta:hover, .cta:focus {
     box-shadow: none;
     border-color: color(var(--color-primary) l(-7%));
     color: color(var(--color-primary) l(-7%));
@@ -326,12 +379,12 @@ h1 a, h2 a, h3 a, h4 a {
 }
 
 .cta-primary {
-    color: var(--color-bg);
+    color: var(--color-bg) !important;
     background: color(var(--color-primary));
 }
 
-.cta-primary:hover, .cta-primary:visited, .cta-primary:focus {
-    color: var(--color-bg);
+.cta-primary:hover, .cta-primary:focus {
+    color: var(--color-bg) !important;
     border-color: color(var(--color-primary) l(-2%));
     background: color(var(--color-primary) l(-2%));
 }
@@ -349,6 +402,11 @@ h1 a, h2 a, h3 a, h4 a {
         flex: 1 1 calc(100%);
         max-width: calc(100%);
     }
+
+    .post-content-form {
+        width: 100%;
+    }
+
 
 }
 
@@ -431,4 +489,11 @@ h1 a, h2 a, h3 a, h4 a {
         max-width: 100%;
         margin: 0.5rem 0;
     }
+
+    .post-content-form .form-group { flex-flow: row wrap; }
+
+    .form-group button { width: 100%; }
+
+    .post-content-form-message { margin-top: 0; }
+
 }
