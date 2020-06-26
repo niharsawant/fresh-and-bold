@@ -1,12 +1,4 @@
 (function () {
-    Array.from(document.getElementsByTagName('script')).forEach(function (scriptDOM) {
-        var filepath = scriptDOM.getAttribute('src');
-        if (filepath && filepath.startsWith('/public/members')) {
-            scriptDOM.toggleAttribute("data-swup-ignore-script");
-        }
-    });
-
-
     var swup = new Swup({
         containers: [
             "#swup-body",
