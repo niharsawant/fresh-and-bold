@@ -2,7 +2,7 @@
     "name": "fresh-and-bold",
     "description": "A minimum, image-centric theme for Ghost built on top of London theme.",
     "demo": "https://nihar.sawant.me",
-    "version": "1.1.1",
+    "version": "1.1.2",
     "engines": {
         "ghost": ">=2.0.0",
         "ghost-api": "v2"
@@ -48,7 +48,7 @@
     "devDependencies": {
         "autoprefixer": "9.8.4",
         "cssnano": "4.1.10",
-        "gscan": "3.5.4",
+        "gscan": "^3.6.1",
         "gulp": "4.0.2",
         "gulp-concat": "^2.6.1",
         "gulp-livereload": "4.0.2",
