@@ -1,8 +1,8 @@
 {{!< default}}
 {{!-- The tag above means - insert everything in this file into the {body} of the default.hbs template --}}
 
-{{#author}}
-{{!-- Everything inside the #author tags pulls data from the author --}}
+{{#primary_author}}
+{{!-- Everything inside the #primary_author tags pulls data from the primary author --}}
 <header class="page-head">
     <h1 class="page-head-title">{{name}}</h1>
     <p class="page-head-description">
@@ -25,13 +25,13 @@
         </div>
     </div>
 </header>
-{{/author}}
+{{/primary_author}}
 
 <div class="post-feed">
     {{#foreach posts}}
 
     {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
-    {{> "post-card"}}
+    {{> "post-card-article"}}
 
     {{/foreach}}
 </div>
