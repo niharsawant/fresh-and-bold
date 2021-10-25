@@ -37,7 +37,7 @@ All the styles are compiled using Gulp/PostCSS to polyfill future CSS spec. You'
 
 ```bash
 $ npm install
-$ npm dev
+$ npm run dev
 ```
 
 Now you can edit `/assets/css/` files, which will be compiled to `/assets/built/` automatically.
@@ -45,7 +45,7 @@ Now you can edit `/assets/css/` files, which will be compiled to `/assets/built/
 The `zip` Gulp task packages the theme files into `dist/<theme-name>.zip`, which you can then upload to your site.
 
 ```bash
-$ npm zip
+$ npm run zip
 ```
 
 ## 💡 Tip

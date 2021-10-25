@@ -46,7 +46,7 @@
         "defaults"
     ],
     "devDependencies": {
-        "autoprefixer": "9.8.4",
+        "autoprefixer": "^10.3.7",
         "cssnano": "^5.0.8",
         "gscan": "^4.9.0",
         "gulp": "4.0.2",
