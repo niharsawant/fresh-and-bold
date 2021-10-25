@@ -1,6 +1,6 @@
 # Fresh and Bold
 
-'Fresh and Bold' is an open source, image-centric portfolio theme for [Ghost](https://ghost.org) derived from [London](https://github.com/TryGhost/London) theme. It was orignially developed for the personal site of Nihar Sawant and now released under the MIT license.
+'Fresh and Bold' is an open source, image-centric portfolio theme for [Ghost](https://ghost.org) derived from [London](https://github.com/TryGhost/London) theme. It was orignially developed for the personal site of [Nihar Sawant](https://nihar.sawant.me) and now released under the MIT license.
 
 **Demo: http://nihar.sawant.me**
 
@@ -11,13 +11,9 @@
 
 &nbsp;
 
-# First time using a Ghost theme?
+# Repository Structure 
 
-Ghost uses a simple templating language called [Handlebars](http://handlebarsjs.com/) for its themes.
-
-We've documented our default theme pretty heavily so that it should be fairly easy to work out what's going on just by reading the code and the comments. Once you feel comfortable with how everything works, we also have full [theme API documentation](https://themes.ghost.org) which explains every possible Handlebars helper and template.
-
-**The main files are:**
+Ghost uses a simple templating language called [Handlebars](http://handlebarsjs.com/) for its themes. If you are interested in building a Ghost theme for yourself, please visit the full [API documentation](https://ghost.org/docs/themes/). Any Ghost theme contains the following files:
 
 - `default.hbs` - The main template file
 - `index.hbs` - Used for the home page
@@ -26,20 +22,22 @@ We've documented our default theme pretty heavily so that it should be fairly ea
 - `tag.hbs` - Used for tag archives
 - `author.hbs` - Used for author archives
 
-One neat trick is that you can also create custom one-off templates just by adding the slug of a page to a template file. For example:
+**In the case of Fresh and Bold theme, we have added a few custom templates as well:**
+- `custom-articles.hbs`: Used to render the articles page in a list form
+- `custom-photo-journal.hbs`: Used to render the main photo journal page 
+- `custom-post-without-featured-image.hbs`: Renders post without any featured image
+- `custom-subscribe.hbs`: Used for a dedicated subscribe page
 
-- `page-about.hbs` - Custom template for the `/about/` page
-- `tag-news.hbs` - Custom template for `/tag/news/` archive
-- `author-ali.hbs` - Custom template for `/author/ali/` archive
+> ⚠️ **Important Note:** Support for [Portal](https://ghost.org/changelog/portal/) feature is currently unavailable. 
 
 
 # Development
 
-London styles are compiled using Gulp/PostCSS to polyfill future CSS spec. You'll need [Node](https://nodejs.org/), [Yarn](https://yarnpkg.com/) and [Gulp](https://gulpjs.com) installed globally. After that, from the theme's root directory:
+All the styles are compiled using Gulp/PostCSS to polyfill future CSS spec. You'll need [Node](https://nodejs.org/), [Yarn](https://yarnpkg.com/) and [Gulp](https://gulpjs.com) installed globally. After that, from the theme's root directory:
 
 ```bash
 $ npm install
-$ npm dev
+$ npm run dev
 ```
 
 Now you can edit `/assets/css/` files, which will be compiled to `/assets/built/` automatically.
@@ -47,13 +45,23 @@ Now you can edit `/assets/css/` files, which will be compiled to `/assets/built/
 The `zip` Gulp task packages the theme files into `dist/<theme-name>.zip`, which you can then upload to your site.
 
 ```bash
-$ npm zip
+$ npm run zip
 ```
+
+## 💡 Tip
+During the development, establish a symbolic link inside the Ghost instance to view the changes in realtime. To set this, make sure you have a Ghost instance running. Inside this instance setup a symbolic using following commands:
+
+```bash
+$ cd /path-to-ghost-instance/content/theme
+$ ln -s /absolute-path-to-theme-repo/fresh-and-bold fresh-and-bold
+```
+
+Ensure that the symbolic link is setup correctly by running `ls -la`. If setup correct, a new entry should appear in [the themes](http://localhost:2368/ghost/#/settings/theme) section in Ghost admin. Activate the theme. Now, whenever you make changes to your theme, they will be reflected immediately in the Ghost instance.
 
 # PostCSS Features Used
 
-- Autoprefixer - Don't worry about writing browser prefixes of any kind, it's all done automatically with support for the latest 2 major versions of every browser.
-- Variables - Simple pure CSS variables
+- Autoprefixer: Don't worry about writing browser prefixes of any kind, it's all done automatically with support for the latest 2 major versions of every browser.
+- Variables: Simple pure CSS variables
 - [Color Function](https://github.com/postcss/postcss-color-function)
 
 
