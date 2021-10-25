@@ -80,9 +80,9 @@
 
 
     {{!-- Email subscribe form at the bottom of the page --}}
-    {{#if @labs.members}}
+    {{#unless @members}}
     {{> subscribe-form}}
-    {{/if}}
+    {{/unless}}
 
     <footer class="post-content-footer">
 
