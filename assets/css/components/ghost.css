@@ -21,7 +21,7 @@
     padding: 1.5rem;
     font-size: 1.3rem;
     line-height: 1.4em;
-    font-weight: 600;
+    font-weight: var(--font-bold);
     color: var(--color-base);
     text-align: center;
     opacity: 0.4;
@@ -122,7 +122,7 @@
     flex-direction: column;
     flex-grow: 1;
     align-items: flex-start;
-    justify-content: start;
+    justify-content: flex-start;
     background: #fff;
     padding: calc(1.75 * var(--margin));
 }
@@ -130,7 +130,7 @@
 .kg-bookmark-title {
     font-size: 100%;
     line-height: 1.5em;
-    font-weight: 600;
+    font-weight: var(--font-bold);
     color: var(--color-base);
     transition: all .3s cubic-bezier(.33,0,.2,1);
 }
@@ -144,7 +144,7 @@
     display: -webkit-box;
     font-size: 90%;
     line-height: 1.5em;
-    font-weight: 400;
+    font-weight: var(--font-normal);
     margin-top: var(--margin);
     max-height: 3em;
     overflow-y: hidden;
@@ -172,7 +172,7 @@
     display: flex;
     align-items: center;
     font-size: 90%;
-    font-weight: 400;
+    font-weight: var(--font-normal);
     margin-top: var(--margin);
     flex-wrap: wrap;
     opacity: 0.75;
