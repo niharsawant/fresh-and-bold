@@ -69,6 +69,15 @@ function js(done) {
     ], handleError(done));
 }
 
+function copyFonts(done) {
+    pump([
+        src([
+            'assets/fonts/**/*'
+        ]),
+        dest('assets/built/fonts')
+    ], handleError(done))
+}
+
 function zipper(done) {
     var targetDir = 'dist/';
     var themeName = require('./package.json').name;
@@ -89,7 +98,7 @@ const cssWatcher = () => watch('assets/css/**', css);
 const jsWatcher = () => watch('assets/js/**', js);
 const hbsWatcher = () => watch(['*.hbs', 'partials/**/*.hbs', '!node_modules/**/*.hbs'], hbs);
 const watcher = parallel(cssWatcher, hbsWatcher, jsWatcher);
-const build = series(css, js);
+const build = series(css, js, copyFonts);
 const dev = series(build, serve, watcher);
 
 exports.build = build;

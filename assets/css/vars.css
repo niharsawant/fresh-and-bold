@@ -1,7 +1,18 @@
 /* Variables
 /* ---------------------------------------------------------- */
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@font-face{
+    font-family: "Proxima Nova W01";
+    font-weight: var(--font-normal);
+    font-display: swap;
+    src: url("fonts/5596735/b38b8bd9-d96f-4bf9-add1-adbd2b08b802.woff2") format("woff2"),url("Fonts/5596735/52ed7b2d-8a31-4b18-a1d5-8685608b0889.woff") format("woff");
+}
+@font-face{
+    font-family: "Proxima Nova W01";
+    font-weight: var(--font-bold);
+    font-display: swap;
+    src: url("fonts/5596920/cc85d073-4dcf-4ecd-9804-40c34e631e2b.woff2") format("woff2"),url("Fonts/5596920/332136cf-33d0-43fb-97ee-49c7742489ff.woff") format("woff");
+}
 
 :root {
 
@@ -15,7 +26,7 @@
     --color-gray: #ababab;
 
     /* Fonts */
-    --font-sans-serif: 'Montserrat', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+    --font-sans-serif: 'Proxima Nova W01', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
     --font-serif: Georgia, Times, serif;
     --font-mono: Menlo, Courier, monospace;
     --font-light: 100;
