@@ -281,7 +281,6 @@ body {
         padding: 1px 0;
         font-size: 2.6rem;
         line-height: 1.15em;
-        font-weight: var(--font-light);
         opacity: 0;
         transition: transform 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99),
         opacity 0.2s cubic-bezier(0.4, 0.01, 0.165, 0.99);
