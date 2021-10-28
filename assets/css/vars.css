@@ -13,12 +13,6 @@
     font-display: swap;
     src: url("fonts/5596920/cc85d073-4dcf-4ecd-9804-40c34e631e2b.woff2") format("woff2"),url("Fonts/5596920/332136cf-33d0-43fb-97ee-49c7742489ff.woff") format("woff");
 }
-@font-face{
-    font-family: "Proxima Nova W01";
-    font-weight: var(--font-light);
-    font-display: swap;
-    src: url("fonts/5738875/ad4a2691-471a-4c43-b88f-0d144d680661.woff2") format("woff2"),url("Fonts/5738875/1da53474-ed78-41a6-872b-7397556eceee.woff") format("woff");
-}
 
 :root {
 
