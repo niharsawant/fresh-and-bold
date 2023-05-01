@@ -73,14 +73,14 @@ h1 a, h2 a, h3 a, h4 a {
 }
 
 .page-index-body {
-    max-width: 720px;
+    max-width: 800px;
     margin: 0 auto;
     padding: 2vw 0 6vw 0;
 }
 
 .page-head-description {
     margin: 1vw 0 1.6vw;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
 }
 
 .page-head-title, .post-content-title {
@@ -89,7 +89,7 @@ h1 a, h2 a, h3 a, h4 a {
 }
 
 .post-content-list {
-    max-width: 720px;
+    max-width: 800px;
     margin: 0 auto;
     padding: 2vw 0 6vw 0;
 }
@@ -110,11 +110,11 @@ h1 a, h2 a, h3 a, h4 a {
 }
 
 .post-content-excerpt {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
 }
 
 .post-content-body {
-    font-size: 1rem;
+    font-size: 1.125rem;
     line-height: 1.75em;
 }
 
