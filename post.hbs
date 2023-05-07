@@ -42,7 +42,6 @@
         {{#if primary_tag}}
         {{#get "posts" filter="primary_tag:{{primary_tag.slug}}+comment_id:-{{comment_id}}" limit="3"}}
         {{#if posts}}
-        <hr>
         <h2 class="post-content-article-title">You might also like</h2>
         <div class="post-content-article-posts post-card-content-article-related">
             {{#foreach posts}}
@@ -67,8 +66,8 @@
             </a>
         </div>
         {{/has}}
+        <hr>
     </div>
-    <hr>
 
     {{!-- Email subscribe form at the bottom of the page --}}
     {{#unless @members}}
