@@ -268,8 +268,25 @@ h1 a, h2 a, h3 a, h4 a {
     padding: 1.65rem;
 }
 
-.kg-bookmark-description, .kg-bookmark-metadata {
+.kg-bookmark-metadata {
     margin-top: var(--small-margin);
+}
+
+.kg-bookmark-description {
+    margin-top: var(--extra-small-margin);
+}
+
+.kg-bookmark-publisher {
+    width: auto;
+}
+
+.kg-bookmark-author:after {
+    content: "";
+    margin: auto;
+}
+
+.kg-bookmark-card a.kg-bookmark-container:hover {
+    border: 1px solid var(--color-gray);
 }
 
 .kg-bookmark-title {
