@@ -5,22 +5,37 @@ input[type="submit"],
 input[type="reset"],
 input[type="button"],
 button,
-.button {
-    display: inline-block;
+.button,
+.kg-button-card a.kg-btn,
+.kg-header-card a.kg-header-card-button {
+    display: flex;
+    position: static;
+    align-items: center;
+
     height: var(--height);
-    padding: 0 2rem;
-    border: 0;
-    border-radius: var(--radius);
-    cursor: pointer;
-    font-family: var(--font-sans-serif);
-    font-size: 1.4rem;
-    font-weight: var(--font-normal);
     line-height: var(--height);
+    max-width: 250px;
+
+    border: 0;
+    border-radius: 0.2em;
+
+    font-family: var(--font-sans-serif);
+    font-size: 1rem;
+    font-weight: var(--font-bold);
+
     text-align: center;
     text-decoration: none;
     white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
     appearance: none;
+    cursor: pointer;
+
     transition: 0.4s ease;
+    box-shadow: none;
+
+    margin: 0 0.5em;
+    padding: 0.75em 1.5em;
 }
 
 input[type="submit"].fit,
@@ -53,7 +68,6 @@ button.large,
     font-size: 1.6rem;
 }
 
-
 input[type="submit"].disabled,
 input[type="submit"]:disabled,
 input[type="reset"].disabled,
@@ -63,11 +77,12 @@ input[type="button"]:disabled,
 button.disabled,
 button:disabled,
 .button.disabled,
-.button:disabled {
+.button:disabled,
+.kg-button-card a.kg-btn:disabled,
+.kg-header-card a.kg-header-card-button:disabled {
     pointer-events: none;
     opacity: 0.4;
 }
-
 
 
 input[type="submit"],
@@ -106,5 +121,123 @@ input[type="reset"].primary:hover,
 input[type="button"].primary:hover,
 button.primary:hover,
 .button.primary:hover {
-        background-color: color(var(--color-primary) l(-10%));
+    background-color: color(var(--color-primary) l(-10%));
+}
+
+
+.cta-container {
+    display: flex;
+    justify-content: center;
+    margin: var(--margin) auto;
+    flex-flow: row wrap;
+}
+
+.post-content-form .cta-loader {
+    display: none;
+    transform: scale(0.85);
+}
+
+.post-content-form.loading .cta-loader { display: block; }
+
+.post-content-form.loading .cta-content { display: none; }
+
+
+.cta {
+    font-size: 1rem;
+    cursor: pointer;
+    color: var(--color-primary);
+    border: 1px solid color(var(--color-primary));
+    background: transparent;
+    padding: 0.75em 1.5em;
+    line-height: 1.65em;
+    height: auto;
+    box-shadow: none;
+    text-decoration: none;
+    font-weight: var(--font-bold);
+    margin: 0 0.5em;
+    border-radius: 0.2em;
+    display: inline-block;
+    flex: 1 1 calc(50% - 1rem);
+    max-width: 250px;
+    text-align: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.cta:hover, .cta:focus {
+    box-shadow: none;
+    border-color: color(var(--color-primary) l(-7%));
+    color: color(var(--color-primary) l(-7%));
+    text-decoration: none;
+}
+
+.cta-primary {
+    color: var(--color-bg) !important;
+    background: color(var(--color-primary));
+}
+
+.cta-primary:hover, .cta-primary:focus {
+    color: var(--color-bg) !important;
+    border-color: color(var(--color-primary) l(-2%));
+    background: color(var(--color-primary) l(-2%));
+}
+
+.post-content-footer-back .cta {
+    max-width: calc(33% - 0.5rem);
+    min-width: auto;
+    width: 100%;
+    margin: 0;
+}
+
+.kg-button-card,
+.kg-button-card * {
+    box-sizing: border-box;
+}
+
+.kg-button-card {
+    display: flex;
+    position: static;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+
+.kg-button-card.kg-align-left {
+    justify-content: flex-start;
+}
+
+.kg-button-card a.kg-btn:hover {
+    opacity: 0.85;
+}
+
+.kg-button-card a.kg-btn-accent {
+    background-color: var(--ghost-accent-color);
+    color: #fff;
+}
+
+.kg-header-card.kg-size-small a.kg-header-card-button {
+    height: 4rem;
+    font-size: 1.4rem;
+}
+
+@media (max-width: 1024px) {
+    .post-content-footer-back .cta {
+        max-width: calc(50% - 0.5rem);
     }
+}
+
+@media (max-width: 850px) {
+    .post-content-footer-back .cta {
+        max-width: 100%;
+        min-width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .cta {
+        flex: 1 1 calc(100%);
+        max-width: 100%;
+        margin: 0.5rem 0;
+    }
+}
