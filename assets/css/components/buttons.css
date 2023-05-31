@@ -99,9 +99,9 @@ input[type="reset"],
 input[type="button"],
 button,
 .button {
-    color: var(--color-primary) !important;
+    color: var(--ghost-accent-color) !important;
     background-color: transparent;
-    box-shadow: inset 0 0 0 2px var(--color-primary);
+    box-shadow: inset 0 0 0 2px var(--ghost-accent-color);
 }
 
 input[type="submit"]:hover,
@@ -110,8 +110,8 @@ input[type="button"]:hover,
 button:hover,
 .button:hover {
     text-decoration: none;
-    color: color(var(--color-primary) l(-15%)) !important;
-    box-shadow: inset 0 0 0 2px color(var(--color-primary) l(-10%));
+    color: color(var(--ghost-accent-color) l(-15%)) !important;
+    box-shadow: inset 0 0 0 2px color(var(--ghost-accent-color) l(-10%));
     transition: 0.2s ease;
 }
 
@@ -121,7 +121,7 @@ input[type="button"].primary,
 button.primary,
 .button.primary {
     color: #fff !important;
-    background-color: var(--color-primary);
+    background-color: var(--ghost-accent-color);
     box-shadow: none;
 }
 
@@ -130,7 +130,7 @@ input[type="reset"].primary:hover,
 input[type="button"].primary:hover,
 button.primary:hover,
 .button.primary:hover {
-    background-color: color(var(--color-primary) l(-10%));
+    background-color: color(var(--ghost-accent-color) l(-10%));
 }
 
 
@@ -154,8 +154,8 @@ button.primary:hover,
 .cta {
     font-size: 1rem;
     cursor: pointer;
-    color: var(--color-primary);
-    border: 1px solid color(var(--color-primary));
+    color: var(--ghost-accent-color);
+    border: 1px solid var(--ghost-accent-color);
     background: transparent;
     padding: 0.75em 1.5em;
     line-height: 1.65em;
@@ -176,20 +176,20 @@ button.primary:hover,
 
 .cta:hover, .cta:focus {
     box-shadow: none;
-    border-color: color(var(--color-primary) l(-7%));
-    color: color(var(--color-primary) l(-7%));
+    border-color: color(var(--ghost-accent-color) l(-7%));
+    color: color(var(--ghost-accent-color) l(-7%));
     text-decoration: none;
 }
 
 .cta-primary {
     color: var(--color-bg) !important;
-    background: color(var(--color-primary));
+    background: var(--ghost-accent-color);
 }
 
 .cta-primary:hover, .cta-primary:focus {
     color: var(--color-bg) !important;
-    border-color: color(var(--color-primary) l(-2%));
-    background: color(var(--color-primary) l(-2%));
+    border-color: color(var(--ghost-accent-color) l(-2%));
+    background: color(var(--ghost-accent-color) l(-2%));
 }
 
 .post-content-footer-back .cta {
