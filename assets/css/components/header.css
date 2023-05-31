@@ -156,18 +156,19 @@
 
 .kg-header-card.kg-style-image a.kg-header-card-button,
 .kg-header-card.kg-style-dark a.kg-header-card-button {
-    background: #fff;
-    color: #151515;
-}
-
-.kg-header-card.kg-style-light a.kg-header-card-button {
     background: var(--ghost-accent-color);
     color: #fff;
 }
 
+.kg-header-card.kg-style-light a.kg-header-card-button {
+    color: var(--ghost-accent-color) !important;
+    background-color: transparent;
+    box-shadow: inset 0 0 0 2px var(--ghost-accent-color);
+}
+
 .kg-header-card.kg-style-accent a.kg-header-card-button {
     background: #fff;
-    color: #151515;
+    color: var(--color-base);
 }
 
 @media (max-width: 640px) {
