@@ -35,7 +35,7 @@ button,
     box-shadow: none;
 
     margin: 0 0.5em;
-    padding: 0.75em 1.5em;
+    padding: 0em 2.5em;
 }
 
 input[type="submit"].fit,
@@ -50,18 +50,27 @@ input[type="submit"].small,
 input[type="reset"].small,
 input[type="button"].small,
 button.small,
-.button.small {
+.button.small,
+.kg-header-card.kg-size-small a.kg-header-card-button {
     height: calc(var(--height) * 0.9);
     line-height: calc(var(--height) * 0.9);
     padding: 0 1.5rem;
     font-size: 1.2rem;
 }
 
+.kg-header-card.kg-size-medium a.kg-header-card-button {
+    height: calc(var(--height));
+    line-height: calc(var(--height));
+    padding: 0 2.5rem;
+    font-size: 1.4rem;
+}
+
 input[type="submit"].large,
 input[type="reset"].large,
 input[type="button"].large,
 button.large,
-.button.large {
+.button.large,
+.kg-header-card.kg-size-large a.kg-header-card-button {
     height: calc(var(--height) * 1.14);
     line-height: calc(var(--height) * 1.14);
     padding: 0 3rem;
@@ -207,18 +216,14 @@ button.primary:hover,
     justify-content: flex-start;
 }
 
-.kg-button-card a.kg-btn:hover {
+.kg-button-card a.kg-btn:hover,
+.kg-header-card a.kg-header-card-button:hover {
     opacity: 0.85;
 }
 
 .kg-button-card a.kg-btn-accent {
     background-color: var(--ghost-accent-color);
     color: #fff;
-}
-
-.kg-header-card.kg-size-small a.kg-header-card-button {
-    height: 4rem;
-    font-size: 1.4rem;
 }
 
 @media (max-width: 1024px) {
