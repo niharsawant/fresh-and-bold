@@ -328,6 +328,7 @@ h1 a, h2 a, h3 a, h4 a {
 .form-group button {
     width: 180px;
     flex: none;
+    display: inline-block;
 }
 
 .post-content-form.loading button[type="submit"] {
