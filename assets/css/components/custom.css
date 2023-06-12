@@ -307,6 +307,11 @@ h1 a, h2 a, h3 a, h4 a {
     height: 33vw;
 }
 
+.kg-toggle-card-icon {
+    padding: 0;
+    box-shadow: none;
+}
+
 .post-content-form {
     width: 45vw;
     margin: 2rem auto;
