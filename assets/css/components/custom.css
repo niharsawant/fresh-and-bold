@@ -312,6 +312,17 @@ h1 a, h2 a, h3 a, h4 a {
     box-shadow: none;
 }
 
+.kg-product-card .kg-product-card-description ol, 
+.kg-product-card .kg-product-card-description p, 
+.kg-product-card .kg-product-card-description ul {
+    font-family: var(--font-sans-serif);
+}
+
+.kg-product-card-image {
+    width: 100%;
+    height: auto;
+}
+
 .post-content-form {
     width: 45vw;
     margin: 2rem auto;
