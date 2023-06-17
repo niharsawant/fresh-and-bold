@@ -323,6 +323,10 @@ h1 a, h2 a, h3 a, h4 a {
     height: auto;
 }
 
+.kg-audio-player-container button, .kg-video-card button {
+    box-shadow: none;
+}
+
 .post-content-form {
     width: 45vw;
     margin: 2rem auto;
