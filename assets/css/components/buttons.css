@@ -178,6 +178,26 @@ button.primary,
     color: #fff;
 }
 
+.gh-search-icon {
+    box-shadow: none;
+    margin: 0 !important;
+    padding: 10px 12px !important;
+    color: var(--color-base) !important;
+    font-weight: var(--font-bold);
+    opacity: 0.4 !important;
+    width: auto !important;
+    height: auto !important;
+}
+
+.gh-search-icon svg {
+    width: 18px;
+    height: 18px;
+}
+
+.gh-search-icon:hover {
+    opacity: 1 !important;
+}
+
 @media (max-width: 1024px) {
     .post-content-footer-back .button {
         max-width: calc(50% - 0.5rem);
