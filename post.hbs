@@ -20,7 +20,7 @@
     <div class="post-content-body">
         {{content}}
     </div>
-
+    
     <div class="post-content-footer">
         {{#has tag="#articles"}}
         <div class="post-content-footer-date">
@@ -52,6 +52,11 @@
         {{/get}}
         {{/if}} 
 
+        {{!-- 
+        Note: Ideally there should link to go to the respective tag and in the 
+        redirects.yml, there should be a rule to redirect to the respective
+        primary category 
+        --}}
         {{#has tag="#articles"}}
         <div class="post-content-footer-back">
             <a class="button" href="/thoughts">
@@ -63,6 +68,13 @@
         <div class="post-content-footer-back">
             <a class="button" href="/photo-journal">
                 Go to photo journal
+            </a>
+        </div>
+        {{/has}}
+        {{#has tag="#portfolio-projects"}}
+        <div class="post-content-footer-back">
+            <a class="button" href="/work">
+                Go to work
             </a>
         </div>
         {{/has}}
