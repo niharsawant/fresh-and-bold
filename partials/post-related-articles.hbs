@@ -1,12 +1,5 @@
 <div class="post-content-footer">
-    {{#has tag="#articles"}}
-    <div class="post-content-footer-date">
-        Published on {{date published_at format="MMMM DD, YYYY"}}
-        {{#if primary_tag}}{{#if tags}}in {{tags}}{{/if}}{{/if}}
-    </div>
-    
-    {{/has}}
-    {{#has tag="#photo-journal"}}
+    {{#has tag="#articles, #photo-journal"}}
     <div class="post-content-footer-date">
         Published on {{date published_at format="MMMM DD, YYYY"}}
         {{#if primary_tag}}{{#if tags}}in {{tags}}{{/if}}{{/if}}
