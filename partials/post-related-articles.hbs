@@ -35,23 +35,29 @@
     --}}
     {{#has tag="#articles"}}
     <div class="post-content-footer-back">
-        <a class="button" href="/thoughts">
-            Go to all articles
+        {{#get "tags" filter="name:#articles+visibility:internal"}}
+        <a class="button" href="/tag/{{tags.[0].slug}}">
+            Go to {{tags.[0].meta_title}}
         </a>
+        {{/get}}
     </div>
     {{/has}}
     {{#has tag="#photo-journal"}}
     <div class="post-content-footer-back">
-        <a class="button" href="/photo-journal">
-            Go to photo journal
+        {{#get "tags" filter="name:#photo-journal+visibility:internal"}}
+        <a class="button" href="/tag/{{tags.[0].slug}}">
+            Go to {{tags.[0].meta_title}}
         </a>
+        {{/get}}
     </div>
     {{/has}}
     {{#has tag="#portfolio-projects"}}
     <div class="post-content-footer-back">
-        <a class="button" href="/work">
-            Go to work
+        {{#get "tags" filter="name:#portfolio-projects+visibility:internal"}}
+        <a class="button" href="/tag/{{tags.[0].slug}}">
+            Go to {{tags.[0].meta_title}}
         </a>
+        {{/get}}
     </div>
     {{/has}}
     <hr>
