@@ -170,7 +170,10 @@ button.primary,
 }
 
 .kg-button-card.kg-align-left {
-    justify-content: flex-start;
+    justify-content: start;
+}
+.kg-button-card.kg-align-center {
+    justify-content: center;
 }
 
 .kg-button-card a.kg-btn-accent {
