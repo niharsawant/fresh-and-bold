@@ -41,9 +41,10 @@
     --xsmall: 480px;
 
     /* Sizes */
-    --height: 4rem;
+    --height: 2rem;
     --margin: 2rem;
     --small-margin: 1.25rem;
+    --extra-small-margin: 0.75rem;
     --radius: 0.5rem;
 
 }

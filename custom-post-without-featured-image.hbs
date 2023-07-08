@@ -1,104 +1,25 @@
-{{!< default}} {{#post}} <article class="post-content {{post_class}} {{#unless feature_image}}no-image{{/unless}}">
+{{!< default}} {{#post}} 
+    <article class="post-content {{post_class}} {{#unless feature_image}}no-image{{/unless}}">
 
-    <header class="post-content-header">
-        <h1 class="post-content-title">{{title}}</h1>
-    </header>
+        <header class="post-content-header">
+            <h1 class="post-content-title">{{title}}</h1>
+        </header>
 
-    {{#if custom_excerpt}}
-    <p class="post-content-excerpt">{{custom_excerpt}}</p>
-    {{/if}}
+        {{#if custom_excerpt}}
+        <p class="post-content-excerpt">{{custom_excerpt}}</p>
+        {{/if}}
 
-    <div class="post-content-body">
-        {{content}}
-    </div>
-
-    {{!-- To do Need a better logic for this --}}
-    {{#if primary_tag}}
-    <div class="post-content-footer">
-        {{#has tag="#articles"}}
-        <div class="post-content-footer-date">
-            Published on {{date published_at format="MMMM DD, YYYY"}} {{#if tags}}in {{tags}}{{/if}}
+        <div class="post-content-body">
+            {{content}}
         </div>
-        <div class="post-content-footer-back">
-            <a href="/thoughts">
-                <span class="post-content-footer-arrow">⟵</span>&nbsp;
-                Go to all articles
-            </a>
-        </div>
-        {{/has}}
-        {{#has tag="#photo-journal"}}
-        <div class="post-content-footer-date">
-            Published on {{date published_at format="MMMM DD, YYYY"}} {{#if tags}}in {{tags}}{{/if}}
-        </div>
-        <div class="post-content-footer-back">
-            <a href="/photo-journal">
-                <span class="post-content-footer-arrow">⟵</span>&nbsp;
-                Go to photo journal
-            </a>
-        </div>
-        {{/has}}
-    </div>
-    {{#get "posts" filter="primary_tag:{{primary_tag.slug}}+commend_id:-{{comment_id}}" limit="3"}}
-    {{#if posts}}
-    <div class="post-content-article">
-        <hr>
-        <h2 class="post-content-article-title">You might also like</h2>
-        <div class="post-content-article-posts post-card-content-article-related">
-            {{#foreach posts}}
-            {{> "post-card-article"}}
-            {{/foreach}}
-        </div>
-    </div>
-    {{/if}}
-    {{/get}}
-    {{else}}
-    <div class="post-content-footer">
-        {{#has tag="#articles"}}
-        <div class="post-content-footer-date">
-            Published on {{date published_at format="MMMM DD, YYYY"}}
-        </div>
-        <div class="post-content-footer-back">
-            <a href="/thoughts">
-                <span class="post-content-footer-arrow">⟵</span>&nbsp;
-                Go to all articles
-            </a>
-        </div>
-        {{/has}}
-        {{#has tag="#photo-journal"}}
-        <div class="post-content-footer-date">
-            Published on {{date published_at format="MMMM DD, YYYY"}}
-        </div>
-        <div class="post-content-footer-back">
-            <a href="/photo-journal">
-                <span class="post-content-footer-arrow">⟵</span>&nbsp;
-                Go to photo journal
-            </a>
-        </div>
-        {{/has}}
-    </div>
-    {{/if}}
-    <hr>
 
-    {{!-- Email subscribe form at the bottom of the page --}}
-    {{#unless @members}}
-    {{> subscribe-form}}
-    {{/unless}}
-
-    <footer class="post-content-footer">
-
-        {{!-- There are two options for how we display the byline/author-info.
-        If the post has more than one author, we load a specific template
-        from includes/byline-multiple.hbs, otherwise, we just use the
-        default byline. --}}
-
-
-    </footer>
-
-    {{!--
-    <section class="post-content-comments">
-        If you want to embed comments, this is a good place to do it!
-    </section>
-    --}}
+        {{> "post-related-articles"}}
+       
+        {{!--
+        <section class="post-content-comments">
+            If you want to embed comments, this is a good place to do it!
+        </section>
+        --}}
 
     </article>
     {{/post}}

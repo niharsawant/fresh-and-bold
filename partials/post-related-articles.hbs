@@ -1,0 +1,62 @@
+<div class="post-content-footer">
+    {{#has tag="#articles, #photo-journal"}}
+    <div class="post-content-footer-date">
+        Published on {{date published_at format="MMMM DD, YYYY"}}
+        {{#if primary_tag}}{{#if tags}}in {{tags}}{{/if}}{{/if}}
+    </div>
+    {{/has}}
+</div>
+
+<div class="post-content-article">
+    {{#if primary_tag}}
+    {{#get "posts" filter="primary_tag:{{primary_tag.slug}}+id:-{{id}}" limit="3"}}
+    {{#if posts}}
+    <h2 class="post-content-article-title">You might also like</h2>
+    <div class="post-content-article-posts post-card-content-article-related">
+        {{#foreach posts}}
+            {{> "post-card-article"}}
+        {{/foreach}}
+    </div>
+    {{/if}}
+    {{/get}}
+    {{/if}} 
+
+    {{!-- 
+    Note: Ideally there should link to go to the respective tag and in the 
+    redirects.yml, there should be a rule to redirect to the respective
+    primary category 
+    --}}
+    {{#has tag="#articles"}}
+    <div class="post-content-footer-back">
+        {{#get "tags" filter="name:#articles+visibility:internal"}}
+        <a class="button" href="/tag/{{tags.[0].slug}}">
+            Go to {{tags.[0].meta_title}}
+        </a>
+        {{/get}}
+    </div>
+    {{/has}}
+    {{#has tag="#photo-journal"}}
+    <div class="post-content-footer-back">
+        {{#get "tags" filter="name:#photo-journal+visibility:internal"}}
+        <a class="button" href="/tag/{{tags.[0].slug}}">
+            Go to {{tags.[0].meta_title}}
+        </a>
+        {{/get}}
+    </div>
+    {{/has}}
+    {{#has tag="#portfolio-projects"}}
+    <div class="post-content-footer-back">
+        {{#get "tags" filter="name:#portfolio-projects+visibility:internal"}}
+        <a class="button" href="/tag/{{tags.[0].slug}}">
+            Go to {{tags.[0].meta_title}}
+        </a>
+        {{/get}}
+    </div>
+    {{/has}}
+    <hr>
+</div>
+
+{{!-- Email subscribe form at the bottom of the page --}}
+{{#unless @members}}
+    {{> subscribe-form}}
+{{/unless}}
