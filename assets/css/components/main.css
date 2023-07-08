@@ -158,6 +158,7 @@ body {
 }
 
 .nav-current a,
+.site-head-logo.nav-current,
 .site-head a:hover {
     text-decoration: none;
     opacity: 1;
@@ -277,7 +278,7 @@ body {
     }
     .site-head-left a,
     .site-head-right a {
-        margin: 8px 0;
+        margin: var(--margin) auto;
         padding: 1px 0;
         font-size: 2.6rem;
         line-height: 1.15em;
@@ -318,6 +319,12 @@ body {
     .social-links {
         flex-direction: column;
         align-items: flex-start;
+    }
+    .site-head li {
+        margin: auto;
+    }
+    .gh-search-icon {
+        margin: var(--margin) auto 0 auto !important;
     }
 
     .site-head-open {
@@ -486,7 +493,7 @@ body {
 /* ---------------------------------------------------------- */
 
 .post-content {
-    max-width: 720px;
+    max-width: 800px;
     margin: 0 auto;
     padding: 6vw 0;
 }

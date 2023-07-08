@@ -21,54 +21,7 @@
         {{content}}
     </div>
 
-    <div class="post-content-footer">
-        {{#has tag="#articles"}}
-        <div class="post-content-footer-date">
-            Published on {{date published_at format="MMMM DD, YYYY"}}
-            {{#if primary_tag}}{{#if tags}}in {{tags}}{{/if}}{{/if}}
-        </div>
-        <div class="post-content-footer-back">
-            <a href="/thoughts">
-                <span class="post-content-footer-arrow">⟵</span>&nbsp;
-                Go to all articles
-            </a>
-        </div>
-        {{/has}}
-        {{#has tag="#photo-journal"}}
-        <div class="post-content-footer-date">
-            Published on {{date published_at format="MMMM DD, YYYY"}}
-            {{#if primary_tag}}{{#if tags}}in {{tags}}{{/if}}{{/if}}
-        </div>
-        <div class="post-content-footer-back">
-            <a href="/photo-journal">
-                <span class="post-content-footer-arrow">⟵</span>&nbsp;
-                Go to photo journal
-            </a>
-        </div>
-        {{/has}}
-    </div>
-
-    {{#if primary_tag}}
-    {{#get "posts" filter="primary_tag:{{primary_tag.slug}}+comment_id:-{{comment_id}}" limit="3"}}
-    {{#if posts}}
-    <div class="post-content-article">
-        <hr>
-        <h2 class="post-content-article-title">You might also like</h2>
-        <div class="post-content-article-posts post-card-content-article-related">
-            {{#foreach posts}}
-                {{> "post-card-article"}}
-            {{/foreach}}
-        </div>
-    </div>
-    {{/if}}
-    {{/get}}
-    {{/if}}
-    <hr>
-
-    {{!-- Email subscribe form at the bottom of the page --}}
-    {{#unless @members}}
-        {{> subscribe-form}}
-    {{/unless}}
+    {{> "post-related-articles"}}
 
     {{!--
     <section class="post-content-comments">

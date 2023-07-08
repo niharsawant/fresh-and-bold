@@ -2,10 +2,9 @@
     "name": "fresh-and-bold",
     "description": "A minimum, image-centric theme for Ghost built on top of London theme.",
     "demo": "https://nihar.sawant.me",
-    "version": "1.2.2",
+    "version": "1.3.0",
     "engines": {
-        "ghost": ">=4.0.0",
-        "ghost-api": "v4"
+        "ghost": ">=4.0.0"
     },
     "license": "MIT",
     "screenshots": {
@@ -81,6 +80,9 @@
             "xl": {
                 "width": 2000
             }
+        },
+        "card_assets": {
+            "exclude": ["button", "header"]
         }
     }
 }
