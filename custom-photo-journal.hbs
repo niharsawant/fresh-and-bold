@@ -22,7 +22,7 @@ into the {body} of the default.hbs template --}}
 {{/post}}
 
 {{!-- Email subscribe form at the bottom of the page --}}
-{{#unless @members}}
+{{#unless @member}}
     {{> subscribe-form}}
 {{/unless}}
 
