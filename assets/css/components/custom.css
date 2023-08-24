@@ -212,6 +212,7 @@ h1 a, h2 a, h3 a, h4 a {
     overflow: hidden;
     width: 100%;
     height: 100%;
+    border-radius: 5px;
 }
 
 .post-card-article .post-card-content {
