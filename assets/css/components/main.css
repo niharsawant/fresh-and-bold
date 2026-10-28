@@ -2,10 +2,19 @@
 /* ---------------------------------------------------------- */
 
 body {
-    font-family: var(--font-sans-serif);
+    font-family: var(--gh-font-body, var(--font-sans-serif));
     background: var(--color-bg);
     transition: background 0.3s ease-out;
     transition-delay: 0.25;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--gh-font-heading, var(--font-sans-serif));
 }
 
 .img {
