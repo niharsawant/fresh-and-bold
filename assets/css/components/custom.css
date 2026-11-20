@@ -590,11 +590,6 @@ body.theme-dark.home-template .page-index-body .post-content-body .kg-bookmark-d
         font-weight: var(--font-bold);
     }
 
-    .site-head-left .nav-current,
-    .site-head-left .nav-current:hover {
-        opacity: 0;
-    }
-
     .site-head-right a {
         font-size: 1.25rem;
     }
@@ -751,9 +746,16 @@ body.home-template .site-wrapper {
 
 .site-head-left .site-head-logo {
     padding: 10px 0;
-    color: #797979;
+    color: var(--color-base);
     font-size: 1.25rem;
     letter-spacing: 1px;
+    opacity: 0.4;
+    transition: opacity 160ms ease;
+}
+
+.site-head-left .site-head-logo.nav-current,
+.site-head-left .site-head-logo:hover,
+.site-head-left .site-head-logo:focus-visible {
     opacity: 1;
 }
 
@@ -773,9 +775,16 @@ body.home-template .site-wrapper {
 
 .site-head-right .nav a {
     padding: 0;
-    color: #797979;
+    color: var(--color-base);
     font-size: 14px;
     line-height: 1.4;
+    opacity: 0.4;
+    transition: opacity 160ms ease;
+}
+
+.site-head-right .nav .nav-current > a,
+.site-head-right .nav a:hover,
+.site-head-right .nav a:focus-visible {
     opacity: 1;
 }
 
@@ -1183,7 +1192,6 @@ body.theme-dark .portfolio-contact .button.secondary {
         margin: 0;
         padding: 10px 0;
         font-size: 1rem;
-        opacity: 1;
         transform: none;
     }
 
@@ -1207,6 +1215,14 @@ body.theme-dark .portfolio-contact .button.secondary {
         height: auto;
     }
 
+    .site-head-open .site-head-left .site-head-logo {
+        opacity: 0.4;
+    }
+
+    .site-head-open .site-head-left .site-head-logo.nav-current {
+        opacity: 1;
+    }
+
     .site-head-open .site-head-right {
         display: flex;
         width: 100%;
@@ -1227,8 +1243,17 @@ body.theme-dark .portfolio-contact .button.secondary {
         margin: 0;
         padding: 4px 0;
         font-size: 1.25rem;
-        opacity: 1;
         transform: none;
+    }
+
+    .site-head-open .site-head-right .nav a {
+        opacity: 0.4;
+    }
+
+    .site-head-open .site-head-right .nav .nav-current > a,
+    .site-head-open .site-head-right .nav a:hover,
+    .site-head-open .site-head-right .nav a:focus-visible {
+        opacity: 1;
     }
 
     .portfolio-testimonials {
