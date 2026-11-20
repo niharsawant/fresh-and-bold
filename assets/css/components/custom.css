@@ -800,14 +800,40 @@ body.home-template .site-wrapper {
 }
 
 .theme-toggle {
-    min-height: 36px;
-    padding: 8px 10px;
-    border: 1px solid transparent;
-    border-radius: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border: 1px solid var(--portfolio-control-border);
+    border-radius: 50%;
     background: transparent;
     color: #797979;
-    font: 600 14px/1.4 var(--font-sans-serif);
     cursor: pointer;
+}
+
+.theme-toggle-icon {
+    display: block;
+    width: 19px;
+    height: 19px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.theme-toggle-icon--sun {
+    display: none;
+}
+
+body.theme-dark .theme-toggle-icon--moon {
+    display: none;
+}
+
+body.theme-dark .theme-toggle-icon--sun {
+    display: block;
 }
 
 .site-head .theme-toggle {
