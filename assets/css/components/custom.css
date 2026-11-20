@@ -71,7 +71,7 @@ h1 a, h2 a, h3 a, h4 a {
 }
 
 .page-head, .page-head-articles {
-    padding: 0 0 2vw 0;
+    padding: 6vw 0 2vw 0;
 }
 
 .page-index-body {
@@ -136,6 +136,10 @@ h1 a, h2 a, h3 a, h4 a {
     margin: 0 calc(50% - 50vw) 4vw;
     transform: translateX(calc(50vw - 50%));
     text-align: center;
+}
+
+body.page-subscribe .post-content-article {
+    margin-top: 6vw;
 }
 
 .post-content-article-posts {
@@ -602,7 +606,7 @@ body.theme-dark.home-template .page-index-body .post-content-body .kg-bookmark-d
 
     .page-head {
         max-width: 100%;
-        padding: 0 0 6vw;
+        padding: 6vw 0;
     }
 
     .post-content-article {
