@@ -71,7 +71,7 @@ h1 a, h2 a, h3 a, h4 a {
 }
 
 .page-head, .page-head-articles {
-    padding: 6vw 0 2vw 0;
+    padding: 0 0 2vw 0;
 }
 
 .page-index-body {
@@ -131,7 +131,7 @@ h1 a, h2 a, h3 a, h4 a {
 .post-content-article {
     position: relative;
     width: 75vw;
-    margin: 4vw calc(50% - 50vw);
+    margin: 0 calc(50% - 50vw) 4vw;
     transform: translateX(calc(50vw - 50%));
     text-align: center;
 }
@@ -600,11 +600,11 @@ body.theme-dark.home-template .page-index-body .post-content-body .kg-bookmark-d
 
     .page-head {
         max-width: 100%;
-        padding: 6vw 0;
+        padding: 0 0 6vw;
     }
 
     .post-content-article {
-        padding: 6vw 0 2vw 0;
+        padding: 0 0 2vw 0;
         width: 100%;
     }
 

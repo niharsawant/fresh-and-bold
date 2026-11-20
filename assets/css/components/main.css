@@ -37,12 +37,12 @@ h6 {
 /* ---------------------------------------------------------- */
 
 .site-wrapper {
-    padding: 3vw;
+    padding: 0 3vw 3vw;
     min-height: 100vh;
 }
 @media (max-width: 850px) {
     .site-wrapper {
-        padding: 6vw;
+        padding: 0 6vw 6vw;
     }
 }
 
