@@ -388,6 +388,9 @@ h6 {
 .post-feed {
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .post-card {
@@ -502,7 +505,9 @@ h6 {
 /* ---------------------------------------------------------- */
 
 .post-content {
-    max-width: 800px;
+    width: 100%;
+    max-width: 1000px;
+    box-sizing: border-box;
     margin: 0 auto;
     padding: 6vw 0;
 }

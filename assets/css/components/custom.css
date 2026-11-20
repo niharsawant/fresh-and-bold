@@ -91,7 +91,9 @@ h1 a, h2 a, h3 a, h4 a {
 }
 
 .post-content-list {
-    max-width: 800px;
+    width: 100%;
+    max-width: 1000px;
+    box-sizing: border-box;
     margin: 0 auto;
     padding: 2vw 0 6vw 0;
 }
