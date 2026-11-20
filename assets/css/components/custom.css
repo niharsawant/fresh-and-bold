@@ -510,7 +510,7 @@ body.theme-dark.home-template .page-index-body .post-content-body .kg-bookmark-d
     padding: 0.75em 1.5em;
     line-height: 1.65em;
     height: auto;
-    border-radius: 0;
+    border-radius: 9999px;
 }
 
 .form-group button {

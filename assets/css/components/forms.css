@@ -28,7 +28,7 @@ input[type="url"],
 select,
 textarea {
     background: var(--color-bg);
-    border-radius: var(--radius);
+    border-radius: 9999px;
     border: none;
     border: solid 1px var(--color-border);
     color: inherit;
