@@ -153,7 +153,6 @@ button.primary,
 .post-content-footer-back .button {
     max-width: calc(33% - 0.5rem);
     min-width: auto;
-    width: 100%;
     margin: 0;
 }
 
