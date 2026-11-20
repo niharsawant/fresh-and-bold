@@ -263,6 +263,11 @@ body.page-subscribe .post-content-article {
     margin: 4vw 0;
 }
 
+/* Keep consecutive wide photo-journal images from inheriting Ghost's negative gap. */
+.post-content-body > .kg-card.kg-image-card.kg-width-wide + .kg-card.kg-image-card.kg-width-wide {
+    margin-top: 0.75em;
+}
+
 .kg-card,
 .kg-bookmark-card,
 .kg-bookmark-container,
