@@ -112,6 +112,42 @@
         }
     };
 
+    var updateThemeToggle = function () {
+        var isDark = document.body.classList.contains('theme-dark');
+        document.querySelectorAll('[data-theme-toggle]').forEach(function (toggle) {
+            toggle.setAttribute('aria-pressed', isDark ? 'true' : 'false');
+            toggle.textContent = isDark ? 'Light mode' : 'Dark mode';
+        });
+    };
+
+    var applySavedTheme = function () {
+        var savedTheme = 'light';
+        try {
+            savedTheme = window.localStorage.getItem('fresh-and-bold-theme') || 'light';
+        } catch (error) {
+            savedTheme = 'light';
+        }
+        var isDark = savedTheme === 'dark';
+        document.body.classList.toggle('theme-dark', isDark);
+        updateThemeToggle();
+    };
+
+    document.addEventListener('click', function (event) {
+        var toggle = event.target.closest('[data-theme-toggle]');
+        if (!toggle) {
+            return;
+        }
+
+        var isDark = !document.body.classList.contains('theme-dark');
+        document.body.classList.toggle('theme-dark', isDark);
+        try {
+            window.localStorage.setItem('fresh-and-bold-theme', isDark ? 'dark' : 'light');
+        } catch (error) {
+            // The toggle still works for this page view if storage is unavailable.
+        }
+        updateThemeToggle();
+    });
+
     document.addEventListener('DOMContentLoaded', function () {
         // Mobile Menu Trigger
         var navBurger = document.getElementsByClassName('nav-burger')[0];
@@ -126,11 +162,13 @@
         });
 
         updateLogoState();
+        applySavedTheme();
     });
 
     swup.on('contentReplaced', function (event) {
         var body = document.getElementsByTagName('body')[0];
         body.classList.remove('site-head-open');
         updateLogoState();
+        applySavedTheme();
     });
 })();

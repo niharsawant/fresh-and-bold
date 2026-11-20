@@ -1,16 +1,19 @@
-{{!--
-
-On every 3rd post, add a special .post-card-large class and load a large image
-For the rest, just output a smaller background image
-
---}}
-
-<div class="post-card-article-container" title="{{title}}">
-    <article class="post-card-article {{post_class}} {{#if feature_image}}with-image" style="background-image: url({{img_url feature_image size="l"}}){{else}}no-image{{/if}}">
-        <a class="post-card-article-link" href="{{url}}">
-            <div class="post-card-content">
-                <h2 class="post-card-article-title">{{title}}</h2>
-            </div>
-        </a>
-    </article>
-</div>
+<article class="portfolio-case-study">
+    <a class="portfolio-case-study-details" href="{{url}}">
+        <div class="portfolio-case-study-copy">
+            <h3>{{title}}</h3>
+            <p>{{excerpt words="32"}}</p>
+        </div>
+        <div class="portfolio-case-study-author">
+            {{#if primary_author.profile_image}}
+            <img src="{{primary_author.profile_image}}" alt="" />
+            {{/if}}
+            <strong>{{primary_author.name}}</strong>
+        </div>
+    </a>
+    <a class="portfolio-case-study-image" href="{{url}}" aria-label="Read {{title}}">
+        {{#if feature_image}}
+            <img src="{{feature_image}}" alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}" />
+        {{/if}}
+    </a>
+</article>

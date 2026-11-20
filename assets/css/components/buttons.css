@@ -124,9 +124,10 @@ button:hover,
 button.primary:hover,
 .button:hover,
 .button.primary:hover,
+.subscribe-button:hover,
 .kg-button-card a.kg-btn:hover,
 .kg-header-card a.kg-header-card-button:hover {
-    opacity: 0.75;
+    filter: brightness(0.96);
     text-decoration: none;
 }
 

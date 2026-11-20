@@ -11,6 +11,10 @@
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
     {{!-- This tag outputs SEO meta+structured data and other important settings --}}
     {{ghost_head}}
 
@@ -32,16 +36,13 @@
                     </div>
                 </a>
                 <nav class="site-head-left">
-                    {{#if @site.logo}}
-                    <a class="site-head-logo" href="{{@site.url}}"><img src="{{@site.logo}}" alt="{{@site.title}}" /></a>
-                    {{else}}
                     <a class="site-head-logo" href="{{@site.url}}">{{@site.title}}</a>
-                    {{/if}}
                 </nav>
                 <div id="swup-navigation-primary" class="site-head-right">
                     {{navigation}}
                     {{navigation type="secondary"}}
                     {{search}}
+                    <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">Dark mode</button>
                 </div>
             </div>
         </header>
