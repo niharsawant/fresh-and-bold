@@ -1172,15 +1172,15 @@ body.theme-dark .portfolio-testimonial footer span {
     color: #aab7af;
 }
 
-body.theme-dark .portfolio-home .button.secondary {
-    border-color: #53645a;
-    background: #151a17;
-    color: #e6ece8 !important;
-}
-
-body.theme-dark .portfolio-contact .button.secondary {
+body.theme-dark .button.secondary,
+body.theme-dark button.secondary,
+body.theme-dark input.secondary,
+body.theme-dark .kg-button-card a.kg-btn.secondary,
+body.theme-dark .kg-header-card a.kg-header-card-button.cms-portfolio-cta__secondary {
+    border-color: #fff;
     background: transparent;
     color: #fff !important;
+    box-shadow: none;
 }
 
 @media (max-width: 1100px) {
