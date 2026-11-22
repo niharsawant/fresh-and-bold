@@ -321,14 +321,14 @@ body.page-subscribe .post-content-article {
     font-size: 1.25rem;
 }
 
-/* Homepage case studies use Ghost bookmark cards. */
-body.home-template .page-index-body .post-content-body .kg-bookmark-card {
+/* Standard Ghost bookmark cards across all post and page content. */
+.post-content-body .kg-bookmark-card {
     width: 100%;
     max-width: 1000px;
     margin: 0 auto 28px;
 }
 
-body.home-template .page-index-body .post-content-body .kg-bookmark-container {
+.post-content-body .kg-bookmark-container {
     display: flex;
     min-height: 246px;
     align-items: stretch;
@@ -341,13 +341,12 @@ body.home-template .page-index-body .post-content-body .kg-bookmark-container {
     transition: border-color 180ms ease, box-shadow 180ms ease;
 }
 
-body.home-template .page-index-body .post-content-body .kg-bookmark-container:hover {
+.post-content-body .kg-bookmark-container:hover {
     border-color: var(--color-border-saturated, #bfc8c4);
-    box-shadow: 0 5px 18px rgb(31 52 42 / 7%);
     text-decoration: none;
 }
 
-body.home-template .page-index-body .post-content-body .kg-bookmark-content {
+.post-content-body .kg-bookmark-content {
     display: flex;
     min-width: 0;
     flex: 1 1 auto;
@@ -359,23 +358,28 @@ body.home-template .page-index-body .post-content-body .kg-bookmark-content {
     background: var(--color-bg);
 }
 
-body.home-template .page-index-body .post-content-body .kg-bookmark-title {
-    color: #354039;
+.post-content-body .kg-bookmark-title {
+    color: #545454;
     font-size: 22px;
     font-weight: 600;
     line-height: 1.5;
 }
 
-body.home-template .page-index-body .post-content-body .kg-bookmark-container:hover .kg-bookmark-title {
-    color: #354039;
+.post-content-body .kg-bookmark-container:hover .kg-bookmark-title {
+    color: #545454;
 }
 
-body.home-template .page-index-body .post-content-body .kg-bookmark-description {
+.post-content-body .kg-bookmark-author,
+.post-content-body .kg-bookmark-publisher {
+    color: #545454;
+}
+
+.post-content-body .kg-bookmark-description {
     display: -webkit-box;
     max-height: none;
     margin-top: 0;
     overflow: hidden;
-    color: var(--portfolio-secondary, #647168);
+    color: #545454;
     font-size: 16px;
     line-height: 1.5;
     opacity: 1;
@@ -383,11 +387,11 @@ body.home-template .page-index-body .post-content-body .kg-bookmark-description 
     -webkit-line-clamp: 3;
 }
 
-body.home-template .page-index-body .post-content-body .kg-bookmark-metadata {
+.post-content-body .kg-bookmark-metadata {
     display: none;
 }
 
-body.home-template .page-index-body .post-content-body .kg-bookmark-thumbnail {
+.post-content-body .kg-bookmark-thumbnail {
     position: relative;
     width: 32%;
     min-width: 0;
@@ -398,7 +402,7 @@ body.home-template .page-index-body .post-content-body .kg-bookmark-thumbnail {
     background: #f0efed;
 }
 
-body.home-template .page-index-body .post-content-body .kg-bookmark-thumbnail img {
+.post-content-body .kg-bookmark-thumbnail img {
     position: absolute;
     inset: 0;
     display: block;
@@ -407,45 +411,51 @@ body.home-template .page-index-body .post-content-body .kg-bookmark-thumbnail im
     object-fit: cover;
 }
 
-body.theme-dark.home-template .page-index-body .post-content-body .kg-bookmark-container {
-    border-color: #344039;
+body.theme-dark .post-content-body .kg-bookmark-container {
+    border-color: #53645a;
 }
 
-body.theme-dark.home-template .page-index-body .post-content-body .kg-bookmark-content {
+body.theme-dark .post-content-body .kg-bookmark-content {
     background: #151a17;
 }
 
-body.theme-dark.home-template .page-index-body .post-content-body .kg-bookmark-title,
-body.theme-dark.home-template .page-index-body .post-content-body .kg-bookmark-author {
+body.theme-dark .post-content-body .kg-bookmark-title,
+body.theme-dark .post-content-body .kg-bookmark-description,
+body.theme-dark .post-content-body .kg-bookmark-author,
+body.theme-dark .post-content-body .kg-bookmark-publisher {
     color: #e6ece8;
 }
 
-body.theme-dark.home-template .page-index-body .post-content-body .kg-bookmark-description {
-    color: #aab7af;
+body.theme-dark .post-content-body .kg-bookmark-container:hover {
+    border-color: #9daaa1;
+}
+
+body.theme-dark .post-content-body .kg-bookmark-container:hover .kg-bookmark-title {
+    color: #e6ece8;
 }
 
 @media (max-width: 1100px) {
-    body.home-template .page-index-body .post-content-body .kg-bookmark-thumbnail {
+    .post-content-body .kg-bookmark-thumbnail {
         width: 35.4%;
         flex-basis: 35.4%;
     }
 
-    body.home-template .page-index-body .post-content-body .kg-bookmark-content {
+    .post-content-body .kg-bookmark-content {
         padding: 24px;
     }
 }
 
 @media (max-width: 640px) {
-    body.home-template .page-index-body .post-content-body .kg-bookmark-card {
+    .post-content-body .kg-bookmark-card {
         margin-bottom: 24px;
     }
 
-    body.home-template .page-index-body .post-content-body .kg-bookmark-container {
+    .post-content-body .kg-bookmark-container {
         min-height: 0;
         flex-direction: column;
     }
 
-    body.home-template .page-index-body .post-content-body .kg-bookmark-thumbnail {
+    .post-content-body .kg-bookmark-thumbnail {
         order: 0;
         width: 100%;
         min-height: 192px;
@@ -453,17 +463,17 @@ body.theme-dark.home-template .page-index-body .post-content-body .kg-bookmark-d
         flex: 0 0 192px;
     }
 
-    body.home-template .page-index-body .post-content-body .kg-bookmark-content {
+    .post-content-body .kg-bookmark-content {
         order: 1;
         min-height: 232px;
         padding: 20px;
     }
 
-    body.home-template .page-index-body .post-content-body .kg-bookmark-title {
+    .post-content-body .kg-bookmark-title {
         font-size: 18px;
     }
 
-    body.home-template .page-index-body .post-content-body .kg-bookmark-description {
+    .post-content-body .kg-bookmark-description {
         font-size: 14px;
         -webkit-line-clamp: 4;
     }
