@@ -391,6 +391,30 @@ body.page-subscribe .post-content-article {
     display: none;
 }
 
+.post-content-body .kg-bookmark-read {
+    display: inline-flex;
+    align-items: center;
+    margin-top: auto;
+    color: #8a938d;
+    font-size: 14px;
+    font-weight: 600;
+    transition: color 180ms ease;
+}
+
+.post-content-body .kg-bookmark-container:hover .kg-bookmark-read {
+    color: #545454;
+}
+
+.post-content-body .kg-bookmark-read-arrow {
+    display: inline-block;
+    margin-left: 4px;
+    transition: transform 180ms ease;
+}
+
+.post-content-body .kg-bookmark-container:hover .kg-bookmark-read-arrow {
+    transform: translateX(4px);
+}
+
 .post-content-body .kg-bookmark-thumbnail {
     position: relative;
     width: 32%;
@@ -417,6 +441,14 @@ body.theme-dark .post-content-body .kg-bookmark-container {
 
 body.theme-dark .post-content-body .kg-bookmark-content {
     background: #151a17;
+}
+
+body.theme-dark .post-content-body .kg-bookmark-read {
+    color: #aab7af;
+}
+
+body.theme-dark .post-content-body .kg-bookmark-container:hover .kg-bookmark-read {
+    color: #e6ece8;
 }
 
 body.theme-dark .post-content-body .kg-bookmark-title,

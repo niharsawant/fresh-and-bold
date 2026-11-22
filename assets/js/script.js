@@ -135,6 +135,26 @@
         updateThemeToggle();
     };
 
+    var addBookmarkReadActions = function () {
+        document.querySelectorAll('.post-content-body .kg-bookmark-card').forEach(function (card) {
+            var content = card.querySelector('.kg-bookmark-content');
+            if (!content || content.querySelector('.kg-bookmark-read')) {
+                return;
+            }
+
+            var action = document.createElement('span');
+            action.className = 'kg-bookmark-read';
+            action.appendChild(document.createTextNode('Read more '));
+
+            var arrow = document.createElement('span');
+            arrow.className = 'kg-bookmark-read-arrow';
+            arrow.setAttribute('aria-hidden', 'true');
+            arrow.textContent = '→';
+            action.appendChild(arrow);
+            content.appendChild(action);
+        });
+    };
+
     var systemTheme = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
     if (systemTheme) {
         systemTheme.addEventListener('change', function () {
@@ -181,6 +201,7 @@
 
         updateLogoState();
         applySavedTheme();
+        addBookmarkReadActions();
     });
 
     swup.on('contentReplaced', function (event) {
@@ -188,5 +209,6 @@
         body.classList.remove('site-head-open');
         updateLogoState();
         applySavedTheme();
+        addBookmarkReadActions();
     });
 })();
