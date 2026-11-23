@@ -36,7 +36,7 @@ h4 {
 }
 
 h1 a, h2 a, h3 a, h4 a {
-    color: color(var(--color-base));
+    color: var(--ghost-accent-color);
 }
 
 .nav {
@@ -106,7 +106,16 @@ h1 a, h2 a, h3 a, h4 a {
 }
 
 .post-list-article-footer a {
-    color: var(--color-base);
+    color: var(--ghost-accent-color);
+}
+
+.post-content-list .post-list-article-container h2 a,
+.post-content-list .post-list-article-footer a,
+.post-content-list .post-list-article-container h2 a:hover,
+.post-content-list .post-list-article-container h2 a:focus-visible,
+.post-content-list .post-list-article-footer a:hover,
+.post-content-list .post-list-article-footer a:focus-visible {
+    color: #222;
 }
 
 .post-list-article-description {
@@ -780,7 +789,7 @@ body.home-template .site-wrapper {
 }
 
 .portfolio-home a {
-    color: inherit;
+    color: var(--ghost-accent-color);
 }
 
 .site-head {
@@ -1045,7 +1054,7 @@ body.theme-dark .theme-toggle-icon--sun {
 }
 
 .portfolio-biography-copy a {
-    color: #07ab61;
+    color: var(--ghost-accent-color);
 }
 
 .portfolio-biography .portfolio-section-action {
@@ -1150,7 +1159,7 @@ body.theme-dark .theme-toggle-icon--sun {
 }
 
 .site-foot a {
-    color: #222;
+    color: var(--ghost-accent-color);
     font-size: inherit;
 }
 
@@ -1169,14 +1178,46 @@ body.theme-dark {
 
 body.theme-dark .portfolio-testimonial,
 body.theme-dark .portfolio-testimonial p,
-body.theme-dark .portfolio-testimonial footer,
-body.theme-dark .site-foot a {
+body.theme-dark .portfolio-testimonial footer {
     color: #e6ece8;
+}
+
+body.theme-dark .site-foot a {
+    color: var(--ghost-accent-color) !important;
 }
 
 body.theme-dark {
     background: #151a17;
     color: #e6ece8;
+}
+
+body.theme-dark .post-content-excerpt {
+    color: #e6ece8;
+    opacity: 1;
+}
+
+body.theme-dark table,
+body.theme-dark th,
+body.theme-dark td {
+    color: #e6ece8;
+}
+
+body.theme-dark table,
+body.theme-dark tbody tr,
+body.theme-dark tbody td {
+    border-color: #53645a;
+}
+
+body.theme-dark tbody tr {
+    background-color: transparent;
+}
+
+body.theme-dark thead,
+body.theme-dark thead tr,
+body.theme-dark thead th,
+body.theme-dark thead td,
+body.theme-dark th {
+    background-color: rgba(230, 236, 232, 0.08);
 }
 
 body.theme-dark input[type="text"],
@@ -1211,8 +1252,7 @@ body.theme-dark .post-content-body hr:after {
 }
 
 body.theme-dark .portfolio-home,
-body.theme-dark .portfolio-home .button.secondary,
-body.theme-dark .site-foot a {
+body.theme-dark .portfolio-home .button.secondary {
     color: #e6ece8 !important;
 }
 
