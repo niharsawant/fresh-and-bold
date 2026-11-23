@@ -1179,6 +1179,37 @@ body.theme-dark {
     color: #e6ece8;
 }
 
+body.theme-dark input[type="text"],
+body.theme-dark input[type="password"],
+body.theme-dark input[type="email"],
+body.theme-dark input[type="tel"],
+body.theme-dark input[type="search"],
+body.theme-dark input[type="url"],
+body.theme-dark select,
+body.theme-dark textarea {
+    border-color: #53645a;
+    background: #151a17;
+    color: #e6ece8;
+}
+
+body.theme-dark .subscribe-email {
+    background-color: #151a17 !important;
+}
+
+body.theme-dark input::placeholder,
+body.theme-dark textarea::placeholder {
+    color: #aab7af;
+    opacity: 1;
+}
+
+body.theme-dark hr {
+    border-top-color: #53645a;
+}
+
+body.theme-dark .post-content-body hr:after {
+    background: #53645a;
+}
+
 body.theme-dark .portfolio-home,
 body.theme-dark .portfolio-home .button.secondary,
 body.theme-dark .site-foot a {
