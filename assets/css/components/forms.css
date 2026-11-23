@@ -12,7 +12,7 @@ fieldset {
 }
 
 label {
-    color: var(--color-primary);
+    color: var(--ghost-accent-color);
     display: block;
     font-size: 0.9em;
     font-weight: var(--font-bold);
@@ -58,8 +58,8 @@ input[type="search"]:focus,
 input[type="url"]:focus,
 select:focus,
 textarea:focus {
-    border-color: var(--color-primary);
-    box-shadow: 0 0 0 1px var(--color-primary);
+    border-color: var(--ghost-accent-color);
+    box-shadow: 0 0 0 1px var(--ghost-accent-color);
 }
 
 select {
@@ -69,7 +69,7 @@ select {
 }
 
 select option {
-    color: var(--color-primary);
+    color: var(--ghost-accent-color);
     background: var(--color-bg);
 }
 
@@ -136,16 +136,16 @@ input[type="radio"] + label:before {
 
 input[type="checkbox"]:checked + label:before,
 input[type="radio"]:checked + label:before {
-    background: var(--color-primary);
-    border-color: var(--color-primary);
+    background: var(--ghost-accent-color);
+    border-color: var(--ghost-accent-color);
     color: var(--color-bg);
     content: '✓';
 }
 
 input[type="checkbox"]:focus + label:before,
 input[type="radio"]:focus + label:before {
-    border-color: var(--color-primary);
-    box-shadow: 0 0 0 1px var(--color-primary);
+    border-color: var(--ghost-accent-color);
+    box-shadow: 0 0 0 1px var(--ghost-accent-color);
 }
 
 

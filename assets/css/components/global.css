@@ -337,7 +337,7 @@ blockquote cite a {
 }
 
 a {
-    color: color(var(--color-primary) l(-5%));
+    color: color(var(--ghost-accent-color) l(-5%));
     text-decoration: none;
     transition: 0.4s ease;
     cursor: pointer;

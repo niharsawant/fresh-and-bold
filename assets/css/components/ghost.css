@@ -138,7 +138,7 @@
 
 .kg-bookmark-container:hover .kg-bookmark-title {
     opacity: 1.0;
-    color: var(--color-primary);
+    color: var(--ghost-accent-color);
 }
 
 .kg-bookmark-description {

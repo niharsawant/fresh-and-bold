@@ -85,7 +85,7 @@ h6 {
 .page-head-title {
     margin: 0;
     font-size: 4.2rem;
-    color: var(--color-primary);
+    color: var(--ghost-accent-color);
 }
 @media (max-width: 500px) {
     .page-head-title {
@@ -520,7 +520,7 @@ h6 {
 
 .post-content-title {
     margin: 0 0 3vw;
-    color: var(--color-primary);
+    color: var(--ghost-accent-color);
     text-align: center;
 }
 
@@ -669,7 +669,7 @@ h6 {
 }
 
 .footnote-backref {
-    color: var(--color-primary) !important;
+    color: var(--ghost-accent-color) !important;
     font-size: 1.2rem;
     font-weight: var(--font-bold);
     text-decoration: none !important;

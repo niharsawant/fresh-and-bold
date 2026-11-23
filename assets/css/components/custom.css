@@ -20,7 +20,7 @@ body {
 
 h1 {
     font-size: 2.0625rem;
-    color: var(--color-primary);
+    color: var(--ghost-accent-color);
 }
 
 h2 {
@@ -87,7 +87,7 @@ h1 a, h2 a, h3 a, h4 a {
 
 .page-head-title, .post-content-title {
 	font-size: 2.625rem;
-    color: var(--color-primary);
+    color: var(--ghost-accent-color);
 }
 
 .post-content-list {
@@ -127,7 +127,7 @@ h1 a, h2 a, h3 a, h4 a {
 }
 
 .post-content-body blockquote {
-    border-left: var(--color-primary) 3px solid;
+    border-left: var(--ghost-accent-color) 3px solid;
 }
 
 .post-content-article {
@@ -215,7 +215,7 @@ body.page-subscribe .post-content-article {
 
 .post-card-article {
     position: relative;
-    background: var(--color-primary) center center;
+    background: var(--ghost-accent-color) center center;
     background-size: cover;
     overflow: hidden;
     width: 100%;
@@ -585,7 +585,7 @@ body.theme-dark .post-content-body .kg-bookmark-container:hover .kg-bookmark-tit
 
 .post-content-form-error { color: tomato; }
 .post-content-form-success {
-    color: var(--color-primary);
+    color: var(--ghost-accent-color);
 }
 
 .post-content-form.success .post-content-form-success { display: block; }
