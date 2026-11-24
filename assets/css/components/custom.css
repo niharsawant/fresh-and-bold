@@ -825,7 +825,7 @@ body.home-template .site-wrapper {
     display: flex;
     align-items: center;
     gap: 24px;
-    margin-top: 10px;
+    margin-top: 0;
 }
 
 .site-head-right .nav {
