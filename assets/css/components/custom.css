@@ -1196,6 +1196,67 @@ body.theme-dark .post-content-excerpt {
     opacity: 1;
 }
 
+body.theme-dark .post-content-list .post-list-article-container h2 a,
+body.theme-dark .post-content-list .post-list-article-footer a,
+body.theme-dark .post-content-list .post-list-article-container h2 a:hover,
+body.theme-dark .post-content-list .post-list-article-container h2 a:focus-visible,
+body.theme-dark .post-content-list .post-list-article-footer a:hover,
+body.theme-dark .post-content-list .post-list-article-footer a:focus-visible {
+    color: #e6ece8;
+}
+
+body.theme-dark .post-content-list .post-list-article-container h2 a:hover,
+body.theme-dark .post-content-list .post-list-article-container h2 a:focus-visible,
+body.theme-dark .post-content-list .post-list-article-footer a:hover,
+body.theme-dark .post-content-list .post-list-article-footer a:focus-visible {
+    text-decoration: underline;
+}
+
+body.theme-dark .page-head-articles .page-head-title {
+    color: var(--ghost-accent-color);
+}
+
+body.theme-dark .page-head-articles .page-head-description a:hover,
+body.theme-dark .page-head-articles .page-head-description a:focus-visible {
+    text-decoration: underline;
+}
+
+body.theme-dark .post-content-excerpt a,
+body.theme-dark .post-content-excerpt a:hover,
+body.theme-dark .post-content-excerpt a:focus-visible,
+body.theme-dark .post-content-list .post-list-article-description a,
+body.theme-dark .post-content-list .post-list-article-description a:hover,
+body.theme-dark .post-content-list .post-list-article-description a:focus-visible {
+    color: var(--ghost-accent-color);
+}
+
+body.theme-dark .post-content-body h1,
+body.theme-dark .post-content-body h2,
+body.theme-dark .post-content-body h3,
+body.theme-dark .post-content-body h4,
+body.theme-dark .post-content-body h5,
+body.theme-dark .post-content-body h6 {
+    color: #e6ece8;
+}
+
+body.theme-dark .portfolio-section-heading h2 {
+    color: var(--ghost-accent-color);
+}
+
+body.theme-dark .post-content-body h1 a,
+body.theme-dark .post-content-body h2 a,
+body.theme-dark .post-content-body h3 a,
+body.theme-dark .post-content-body h4 a,
+body.theme-dark .post-content-body h5 a,
+body.theme-dark .post-content-body h6 a {
+    color: var(--ghost-accent-color);
+}
+
+body.theme-dark .gh-search-icon {
+    color: #e6ece8 !important;
+    opacity: 1 !important;
+}
+
 body.theme-dark table,
 body.theme-dark th,
 body.theme-dark td {
