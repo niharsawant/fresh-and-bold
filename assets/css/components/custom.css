@@ -475,7 +475,7 @@ body.theme-dark .post-content-body .kg-bookmark-container:hover .kg-bookmark-tit
     color: #e6ece8;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 850px) {
     .post-content-body .kg-bookmark-thumbnail {
         width: 35.4%;
         flex-basis: 35.4%;
@@ -914,7 +914,7 @@ body.theme-dark .theme-toggle-icon--sun {
     gap: 14px;
 }
 
-@media (min-width: 1101px) {
+@media (min-width: 851px) {
     .page-index-body .cms-portfolio-hero {
         padding-top: 37.4px;
     }
@@ -1357,7 +1357,7 @@ body.theme-dark .kg-header-card a.kg-header-card-button.cms-portfolio-cta__secon
     box-shadow: none;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 850px) {
     .portfolio-testimonial-grid {
         max-width: 800px;
     }
