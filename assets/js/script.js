@@ -11,7 +11,7 @@
             "#swup-body",
             "#swup-navigation-primary"
         ],
-        plugins: [new SwupScrollPlugin(), new SwupScriptsPlugin()]
+        plugins: [new SwupScrollPlugin(), new SwupScriptsPlugin({ optin: true })]
     });
 
     // Swup replaces selected body containers, but Ghost can output page-specific
@@ -155,6 +155,20 @@
         });
     };
 
+    var updateGalleryImageRatios = function () {
+        document.querySelectorAll('.kg-gallery-image img').forEach(function (image) {
+            var container = image.closest('.kg-gallery-image');
+            var width = Number(image.getAttribute('width'));
+            var height = Number(image.getAttribute('height'));
+
+            if (!container || !width || !height) {
+                return;
+            }
+
+            container.style.flex = width / height + ' 1 0%';
+        });
+    };
+
     var systemTheme = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
     if (systemTheme) {
         systemTheme.addEventListener('change', function () {
@@ -202,6 +216,7 @@
         updateLogoState();
         applySavedTheme();
         addBookmarkReadActions();
+        updateGalleryImageRatios();
     });
 
     swup.on('contentReplaced', function (event) {
@@ -210,5 +225,6 @@
         updateLogoState();
         applySavedTheme();
         addBookmarkReadActions();
+        updateGalleryImageRatios();
     });
 })();
