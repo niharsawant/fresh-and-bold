@@ -1035,8 +1035,7 @@ body.site-head-open.theme-dark {
 body.theme-dark .button.secondary,
 body.theme-dark button.secondary,
 body.theme-dark input.secondary,
-body.theme-dark .kg-button-card a.kg-btn.secondary,
-body.theme-dark .kg-header-card a.kg-header-card-button.cms-portfolio-cta__secondary {
+body.theme-dark .kg-button-card a.kg-btn.secondary {
     border-color: #fff;
     background: transparent;
     color: #fff !important;
