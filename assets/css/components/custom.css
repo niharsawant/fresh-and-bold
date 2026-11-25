@@ -1595,6 +1595,16 @@ body.theme-dark .kg-header-card a.kg-header-card-button.cms-portfolio-cta__secon
 }
 
 @media (max-width: 850px) {
+    .site-head-open .site-head-left .site-head-logo.nav-current,
+    .site-head-open .site-head-left .site-head-logo.nav-current:hover,
+    .site-head-open .site-head-left .site-head-logo.nav-current:focus-visible,
+    .site-head-open .site-head-right .nav .nav-current > a,
+    .site-head-open .site-head-right .nav .nav-current > a:hover,
+    .site-head-open .site-head-right .nav .nav-current > a:focus-visible {
+        border-bottom: 0 !important;
+        text-decoration: none !important;
+    }
+
     .site-head-left,
     .site-head-right {
         display: none !important;
