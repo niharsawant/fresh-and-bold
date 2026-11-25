@@ -29,7 +29,7 @@
     {{#has tag="#articles"}}
     <div class="post-content-footer-back">
         {{#get "tags" filter="name:#articles+visibility:internal"}}
-        <a class="button" href="/tag/{{tags.[0].slug}}">
+        <a class="button secondary" href="/tag/{{tags.[0].slug}}">
             Go to {{tags.[0].meta_title}}
         </a>
         {{/get}}
@@ -38,7 +38,7 @@
     {{#has tag="#photo-journal"}}
     <div class="post-content-footer-back">
         {{#get "tags" filter="name:#photo-journal+visibility:internal"}}
-        <a class="button" href="/tag/{{tags.[0].slug}}">
+        <a class="button secondary" href="/tag/{{tags.[0].slug}}">
             Go to {{tags.[0].meta_title}}
         </a>
         {{/get}}
@@ -47,7 +47,7 @@
     {{#has tag="#portfolio-projects"}}
     <div class="post-content-footer-back">
         {{#get "tags" filter="name:#portfolio-projects+visibility:internal"}}
-        <a class="button" href="/tag/{{tags.[0].slug}}">
+        <a class="button secondary" href="/tag/{{tags.[0].slug}}">
             Go to {{tags.[0].meta_title}}
         </a>
         {{/get}}

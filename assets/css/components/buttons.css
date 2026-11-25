@@ -210,7 +210,6 @@ button.primary,
 @media (max-width: 850px) {
     .post-content-footer-back .button {
         max-width: 100%;
-        min-width: 100%;
     }
 }
 
