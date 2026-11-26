@@ -368,14 +368,14 @@ body.page-subscribe .post-content-article {
 }
 
 .post-content-body .kg-bookmark-title {
-    color: #545454;
+    color: var(--color-base);
     font-size: 22px;
     font-weight: 600;
     line-height: 1.5;
 }
 
 .post-content-body .kg-bookmark-container:hover .kg-bookmark-title {
-    color: #545454;
+    color: var(--color-base);
 }
 
 .post-content-body .kg-bookmark-author,
