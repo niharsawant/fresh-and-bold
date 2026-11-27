@@ -124,9 +124,10 @@ button:hover,
 button.primary:hover,
 .button:hover,
 .button.primary:hover,
+.subscribe-button:hover,
 .kg-button-card a.kg-btn:hover,
 .kg-header-card a.kg-header-card-button:hover {
-    opacity: 0.75;
+    filter: brightness(0.96);
     text-decoration: none;
 }
 
@@ -152,7 +153,6 @@ button.primary,
 .post-content-footer-back .button {
     max-width: calc(33% - 0.5rem);
     min-width: auto;
-    width: 100%;
     margin: 0;
 }
 
@@ -210,7 +210,6 @@ button.primary,
 @media (max-width: 850px) {
     .post-content-footer-back .button {
         max-width: 100%;
-        min-width: 100%;
     }
 }
 

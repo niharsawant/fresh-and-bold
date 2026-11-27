@@ -39,6 +39,11 @@
     color: #ffffff;
 }
 
+body.theme-dark .kg-header-card.kg-width-full.kg-style-dark {
+    border: 1px solid #344039;
+    background: #202923;
+}
+
 .kg-header-card.kg-style-light {
     background-color: #fafafa;
 }

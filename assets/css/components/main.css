@@ -37,12 +37,12 @@ h6 {
 /* ---------------------------------------------------------- */
 
 .site-wrapper {
-    padding: 3vw;
+    padding: 0 3vw 3vw;
     min-height: 100vh;
 }
 @media (max-width: 850px) {
     .site-wrapper {
-        padding: 6vw;
+        padding: 0 6vw 6vw;
     }
 }
 
@@ -85,7 +85,7 @@ h6 {
 .page-head-title {
     margin: 0;
     font-size: 4.2rem;
-    color: var(--color-primary);
+    color: var(--ghost-accent-color);
 }
 @media (max-width: 500px) {
     .page-head-title {
@@ -364,9 +364,6 @@ h6 {
         opacity 0.9s cubic-bezier(0.4, 0.01, 0.165, 0.99);
         transform: scale(1) translateY(0px);
     }
-    .site-head-open .nav-current a {
-        border-bottom: var(--color-base) 2px solid;
-    }
     .site-head-open .site-head-right a {
         opacity: 0.5;
     }
@@ -388,6 +385,9 @@ h6 {
 .post-feed {
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .post-card {
@@ -502,7 +502,9 @@ h6 {
 /* ---------------------------------------------------------- */
 
 .post-content {
-    max-width: 800px;
+    width: 100%;
+    max-width: 1000px;
+    box-sizing: border-box;
     margin: 0 auto;
     padding: 6vw 0;
 }
@@ -515,7 +517,7 @@ h6 {
 
 .post-content-title {
     margin: 0 0 3vw;
-    color: var(--color-primary);
+    color: var(--ghost-accent-color);
     text-align: center;
 }
 
@@ -664,7 +666,7 @@ h6 {
 }
 
 .footnote-backref {
-    color: var(--color-primary) !important;
+    color: var(--ghost-accent-color) !important;
     font-size: 1.2rem;
     font-weight: var(--font-bold);
     text-decoration: none !important;
@@ -692,12 +694,12 @@ h6 {
     display: block;
     margin: 0;
     padding: 0 12px;
-    color: var(--color-base);
-    opacity: 0.4;
+    color: var(--ghost-accent-color);
+    opacity: 1;
 }
 
 .author-links a:hover {
-    text-decoration: none;
+    text-decoration: underline;
     opacity: 1;
 }
 

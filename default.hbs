@@ -11,6 +11,10 @@
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
     {{!-- This tag outputs SEO meta+structured data and other important settings --}}
     {{ghost_head}}
 
@@ -19,6 +23,19 @@
 
 </head>
 <body class="{{body_class}}">
+    <script>
+        (function () {
+            var savedTheme = null;
+            try {
+                savedTheme = window.localStorage.getItem('fresh-and-bold-theme');
+            } catch (error) {
+                savedTheme = null;
+            }
+            var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            var isDark = savedTheme === 'dark' || (savedTheme !== 'light' && prefersDark);
+            document.body.classList.toggle('theme-dark', isDark);
+        })();
+    </script>
 
     <div class="site-wrapper">
 
@@ -32,16 +49,21 @@
                     </div>
                 </a>
                 <nav class="site-head-left">
-                    {{#if @site.logo}}
-                    <a class="site-head-logo" href="{{@site.url}}"><img src="{{@site.logo}}" alt="{{@site.title}}" /></a>
-                    {{else}}
                     <a class="site-head-logo" href="{{@site.url}}">{{@site.title}}</a>
-                    {{/if}}
                 </nav>
                 <div id="swup-navigation-primary" class="site-head-right">
                     {{navigation}}
                     {{navigation type="secondary"}}
                     {{search}}
+                    <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark mode" title="Switch to dark mode" aria-pressed="false">
+                        <svg class="theme-toggle-icon theme-toggle-icon--moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                            <path d="M20.1 15.4A8.5 8.5 0 0 1 8.6 3.9 8.5 8.5 0 1 0 20.1 15.4Z" />
+                        </svg>
+                        <svg class="theme-toggle-icon theme-toggle-icon--sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                            <circle cx="12" cy="12" r="4" />
+                            <path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42" />
+                        </svg>
+                    </button>
                 </div>
             </div>
         </header>

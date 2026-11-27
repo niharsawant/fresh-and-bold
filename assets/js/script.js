@@ -11,7 +11,7 @@
             "#swup-body",
             "#swup-navigation-primary"
         ],
-        plugins: [new SwupScrollPlugin(), new SwupScriptsPlugin()]
+        plugins: [new SwupScrollPlugin(), new SwupScriptsPlugin({ optin: true })]
     });
 
     // Swup replaces selected body containers, but Ghost can output page-specific
@@ -112,6 +112,94 @@
         }
     };
 
+    var updateThemeToggle = function () {
+        var isDark = document.body.classList.contains('theme-dark');
+        document.querySelectorAll('[data-theme-toggle]').forEach(function (toggle) {
+            toggle.setAttribute('aria-pressed', isDark ? 'true' : 'false');
+            var label = isDark ? 'Switch to light mode' : 'Switch to dark mode';
+            toggle.setAttribute('aria-label', label);
+            toggle.setAttribute('title', label);
+        });
+    };
+
+    var applySavedTheme = function () {
+        var savedTheme = null;
+        try {
+            savedTheme = window.localStorage.getItem('fresh-and-bold-theme');
+        } catch (error) {
+            savedTheme = null;
+        }
+        var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var isDark = savedTheme === 'dark' || (savedTheme !== 'light' && prefersDark);
+        document.body.classList.toggle('theme-dark', isDark);
+        updateThemeToggle();
+    };
+
+    var addBookmarkReadActions = function () {
+        document.querySelectorAll('.post-content-body .kg-bookmark-card').forEach(function (card) {
+            var content = card.querySelector('.kg-bookmark-content');
+            if (!content || content.querySelector('.kg-bookmark-read')) {
+                return;
+            }
+
+            var action = document.createElement('span');
+            action.className = 'kg-bookmark-read';
+            action.appendChild(document.createTextNode('Read more '));
+
+            var arrow = document.createElement('span');
+            arrow.className = 'kg-bookmark-read-arrow';
+            arrow.setAttribute('aria-hidden', 'true');
+            arrow.textContent = '→';
+            action.appendChild(arrow);
+            content.appendChild(action);
+        });
+    };
+
+    var updateGalleryImageRatios = function () {
+        document.querySelectorAll('.kg-gallery-image img').forEach(function (image) {
+            var container = image.closest('.kg-gallery-image');
+            var width = Number(image.getAttribute('width'));
+            var height = Number(image.getAttribute('height'));
+
+            if (!container || !width || !height) {
+                return;
+            }
+
+            container.style.flex = width / height + ' 1 0%';
+        });
+    };
+
+    var systemTheme = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
+    if (systemTheme) {
+        systemTheme.addEventListener('change', function () {
+            var savedTheme = null;
+            try {
+                savedTheme = window.localStorage.getItem('fresh-and-bold-theme');
+            } catch (error) {
+                savedTheme = null;
+            }
+            if (savedTheme !== 'dark' && savedTheme !== 'light') {
+                applySavedTheme();
+            }
+        });
+    }
+
+    document.addEventListener('click', function (event) {
+        var toggle = event.target.closest('[data-theme-toggle]');
+        if (!toggle) {
+            return;
+        }
+
+        var isDark = !document.body.classList.contains('theme-dark');
+        document.body.classList.toggle('theme-dark', isDark);
+        try {
+            window.localStorage.setItem('fresh-and-bold-theme', isDark ? 'dark' : 'light');
+        } catch (error) {
+            // The toggle still works for this page view if storage is unavailable.
+        }
+        updateThemeToggle();
+    });
+
     document.addEventListener('DOMContentLoaded', function () {
         // Mobile Menu Trigger
         var navBurger = document.getElementsByClassName('nav-burger')[0];
@@ -126,11 +214,17 @@
         });
 
         updateLogoState();
+        applySavedTheme();
+        addBookmarkReadActions();
+        updateGalleryImageRatios();
     });
 
     swup.on('contentReplaced', function (event) {
         var body = document.getElementsByTagName('body')[0];
         body.classList.remove('site-head-open');
         updateLogoState();
+        applySavedTheme();
+        addBookmarkReadActions();
+        updateGalleryImageRatios();
     });
 })();
